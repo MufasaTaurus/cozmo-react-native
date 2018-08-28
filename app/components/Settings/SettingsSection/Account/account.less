@@ -1,0 +1,65 @@
+.settings-account {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .account-content {
+        flex: 1;
+        overflow: scroll;
+
+        .account-card {
+            margin: 10px;
+            width: 598px;
+            min-height: 860px;
+            background: #fff;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+
+            .card-content {
+                padding: 20px 40px;
+
+                .profile {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #505050;
+                    margin-bottom: 20px;
+                }
+
+                .form-wrapper {
+                    width: 480px;
+
+                    .side-by-side {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .short {
+                        width: 235px;
+                    }
+
+                    .password-wrapper {
+                        position: relative;
+
+                        .edit-password {
+                            position: absolute;
+                            font-size: 15px;
+                            font-weight: 500;
+                            color: #4a90e2;
+                            text-decoration: underline;
+                            cursor: pointer;
+                            right: -40px;
+                            top: 32px;
+
+                            &:hover {
+                                filter: brightness(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .account-footer {
+    }
+}

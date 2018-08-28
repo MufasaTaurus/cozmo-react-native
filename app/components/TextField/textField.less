@@ -1,0 +1,117 @@
+@borderColor: #c4c4c4;
+
+.text-field-group {
+    margin-bottom: 20px;
+
+    .input-wrapper {
+        position: relative;
+    }
+
+    .text-field {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        color: #555;
+        outline: none;
+        border: 1px solid @borderColor;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: 500;
+        background: #fff;
+        resize: none;
+
+        &.one-line {
+            height: 38px;
+        }
+
+        &:focus, &:active {
+            background: #edfdfc;
+            border: 1px solid #5cc7bd;
+        }
+
+        &.has-error {
+            border: 1px solid #F1453D;
+            background: #ffebee!important;
+        }
+
+        &.has-addon-right {
+            padding-right: 90px ;
+        }
+
+        &.has-addon-left {
+            padding-left: 50px ;
+        }
+
+        &.disabled {
+            background: #f5f5f5;
+        }
+    }
+
+    .text-field-error {
+        position: relative;
+
+        .text-field-error-text {
+            position: absolute;
+            color: #F1453D;
+            text-align: right;
+            font-size: 16px;
+            font-weight: 500;
+            width: 100%;
+        }
+    }
+
+    .text-field-label {
+        color: #777777;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.8;
+    }
+
+    .text-field-counter {
+        float: right;
+        font-style: italic;
+        color: #777777;
+        font-size: 16px;
+        top: 4px;
+        position: relative;
+    }
+
+    .text-field-addon-right {
+        position: absolute;
+        margin-left: -89px;
+        margin-top: 1px;
+        height: 36px;
+        width: 88px;
+        background: #eeeeee;
+        color: #555;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 38px;
+        text-align: center;
+        border-left: 1px solid @borderColor;
+    }
+
+    .text-field-addon-left {
+        position: absolute;
+        left: 0;
+        margin-top: 1px;
+        margin-left: 1px;
+        height: 36px;
+        width: 40px;
+        background: #eeeeee;
+        color: #555;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 38px;
+        text-align: center;
+        border-right: 1px solid @borderColor;
+    }
+
+    &.big {
+        margin-bottom: 20px;
+
+        .text-field {
+            height: 50px;
+        }
+    }
+}

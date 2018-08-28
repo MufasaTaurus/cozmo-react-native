@@ -1,0 +1,135 @@
+.create-template {
+    height: 100%;
+
+    .content {
+        padding: 10px;
+        display: flex;
+
+        .details-section {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+
+            .template-details {
+                background: #fff;
+                width: 900px;
+
+                .templates-details-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #e5e5e5;
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: #37474f;
+                    padding: 15px 12px;
+                    height: 60px;
+
+                    .header-icon {
+                        margin-right: 8px;
+                        position: relative;
+                        top: -2px;
+                    }
+
+                    .actions {
+                        .button-new {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+
+                .templates-details-content {
+                    display: flex;
+
+                    .section-left-side {
+                        background: #fafafa;
+                        width: 300px;
+                        padding: 20px;
+                        border-right: 1px solid #e5e5e5;
+
+                        .select-group {
+                            margin-top: 0;
+                        }
+
+                        .tags-with-autocomplete-group {
+                            margin-top: 10px;
+                        }
+                    }
+
+                    .section-right-side {
+                        padding: 30px;
+                        flex: 1;
+
+                        .editor-wrapper {
+                            border: 1px solid #9b9b9b;
+
+                            .public-DraftEditorPlaceholder-root {
+                                padding: 11px;
+                                color: #B7B7B7;
+                                font-size: 14px;
+                            }
+
+                            .public-DraftEditor-content {
+                                padding: 11px;
+                                font-size: 14px;
+                                color: #696969;
+                                font-weight: 500;
+                            }
+
+                            .text-editor-controls {
+                                border-top: 1px solid #9b9b9b;
+                                box-shadow: none;
+                                z-index: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .labels-section {
+            margin-left: 10px;
+        }
+
+
+
+
+
+
+        .templates-form-input {
+            width: 400px!important;
+        }
+
+        .tags-section {
+            display: flex;
+
+            .rendered-tags-wrapper {
+                position: relative;
+                top: 36px;
+                z-index: 2;
+
+                .rendered-tags {
+                    position: absolute;
+                }
+            }
+
+            .tag-input {
+                min-width: 400px;
+
+                .tags-autocomplete {
+                    position: relative;
+                }
+
+                .tag-example {
+                    font-size: 12px;
+                    color: #7d7d7d;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        .save-button {
+            margin-top: 12px;
+            text-align: right;
+        }
+    }
+}

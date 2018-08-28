@@ -1,0 +1,100 @@
+.properties-group-add-properties {
+    .prop-table {
+        min-height: 600px;
+
+        .search-bar {
+            .checkbox-wrapper {
+                display: none;
+            }
+        }
+    }
+
+    .footer {
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border-top: 1px solid #e5e5e5;
+        min-height: 80px;
+        max-height: 80px;
+
+        .ghost {
+            margin-right: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .properties-group-add-properties {
+        .modal-wrapper {
+            .modal-overlay {
+                .modal {
+                    .modal-content {
+                        height: calc(~"100vh - 60px")!important;
+                        max-height: unset;
+                    }
+                }
+            }
+        }
+
+        .prop-table {
+            min-height: unset;
+
+            .search-bar {
+                .checkbox-wrapper {
+                    display: block;
+                    position: relative;
+                    left: -12px;
+                }
+            }
+
+            .property {
+                height: 105px;
+
+                &:first-child {
+                    border-top: 1px solid #ddd;
+                }
+
+                td {
+
+                    .vj-property-new-image-wrapper {
+                        width: 80px;
+                        height: 66px;
+
+                        .vj-property-new-image {
+                            max-width: 80px;
+                            height: 66px;
+                        }
+                    }
+
+                    &:first-child {
+                        padding-left: 6px!important;
+                    }
+
+                    &:last-child {
+                        padding-right: 6px!important;
+                    }
+
+                    &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid #e5e5e5;
+            min-height: 80px;
+            max-height: 80px;
+
+            .ghost {
+                display: none;
+            }
+        }
+    }
+}
+

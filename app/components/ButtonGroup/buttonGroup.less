@@ -1,0 +1,58 @@
+.button-group-wrapper {
+    display: inline-block;
+
+    .button-group {
+        display: flex;
+        border: 1px solid #d1d1d1;
+        border-radius: 2px;
+        font-size: 14px;
+
+        &-button {
+            padding: 5px 25px;
+            background: #ecf0f1;
+            border-right: 1px solid #d1d1d1;
+            color: #696969;
+            cursor: pointer;
+
+            .button-group-tooltip-wrapper {
+                position: relative;
+                display: none;
+
+                .button-group-tooltip {
+                    position: absolute;
+                    background: #757575;
+                    color: #fff;
+                    padding: 4px;
+                    font-size: 12px;
+                    border-radius: 2px;
+                    width: 60px;
+                    text-align: center;
+                    margin-left: -20px;
+                    margin-top: 10px;
+
+                    &:before {
+                        display: block;
+                        content: '';
+                        border: 8px solid transparent;
+                        border-bottom-color: #757575;
+                        position: absolute;
+                        margin-top: -20px;
+                        margin-left: 18px;
+                    }
+                }
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+
+            &:hover {
+                color: #909191;
+
+                .button-group-tooltip-wrapper {
+                    display: block;
+                }
+            }
+        }
+    }
+}

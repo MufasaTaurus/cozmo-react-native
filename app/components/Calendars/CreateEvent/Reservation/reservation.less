@@ -1,0 +1,108 @@
+.calendars-create-new-event-reservation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .reservation-content {
+        flex: 1;
+        overflow: auto;
+        padding: 20px 40px;
+
+        .side-by-side {
+            display: flex;
+        }
+
+        .small {
+            width: 182px;
+        }
+
+        .space {
+            margin-right: 10px;
+        }
+
+        .section {
+            border-bottom: 1px solid #ddd;
+            margin: 0 -40px;
+            padding: 20px 40px;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .vj-subsection-header {
+                margin-bottom: 16px;
+            }
+        }
+
+        .dates {
+            border: 1px solid #c4c4c4;
+            border-radius: 2px;
+            padding: 10px;
+            color: #696969;
+            font-size: 14px;
+
+            .separator {
+                margin: 0 12px;
+            }
+
+            .date {
+                display: inline-block;
+                position: relative;
+            }
+        }
+
+        .property {
+            display: flex;
+            height: 56px;
+            border: solid 1px #dddddd;
+            margin-bottom: 10px;
+
+            .image {
+                min-width: 55px;
+                max-width: 55px;
+                height: 100%;
+                background-position: center;
+                background-size: cover;
+            }
+
+            .text {
+                padding: 0 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 1;
+
+                .name {
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #232323;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 250px;
+                }
+
+                .address {
+                    font-size: 14px;
+                    font-weight: 300;
+                    color: #5c5c5c;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 250px;
+                }
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+}

@@ -1,0 +1,42 @@
+.analytics-boxes {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    margin: 30px 0;
+
+    .box {
+        padding: 16px 26px;
+        width: 33%;
+        max-width: 352px;
+        color: #fff;
+
+        &.positive {
+            background: #00c853;
+        }
+
+        &.negative {
+            background: #ef5350;
+        }
+
+        &.neutral {
+            background: #636363;
+        }
+
+        .header {
+            .title {
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .subtitle {
+                font-size: 10px;
+            }
+        }
+
+        .value {
+            text-align: center;
+            font-size: 32px;
+        }
+    }
+}

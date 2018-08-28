@@ -1,0 +1,65 @@
+.add-connection {
+    .add-connection-form {
+        min-height: 500px;
+    }
+
+    .narrow {
+        width: 260px;
+    }
+
+    .side-by-side {
+        display: flex;
+    }
+
+    .error-msg {
+        position: absolute;
+        color: red;
+        font-size: 12px;
+    }
+
+    .space {
+        margin-left: 10px;
+    }
+
+    .connection-importing {
+        text-align: center;
+        padding: 125px 0;
+
+        .found {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 2.8px;
+            color: #62AEF6;
+            text-transform: uppercase;
+            margin-top: 50px;
+            margin-bottom: 8px;
+        }
+
+        .info {
+            font-size: 15px;
+            font-weight: 500;
+            color: #696969;
+        }
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .add-connection {
+
+        .narrow {
+            width: 100%;
+        }
+
+        .side-by-side {
+            display: block;
+        }
+
+        .space {
+            margin-left: 0;
+        }
+
+        .connection-importing {
+            padding: 50px 0;
+        }
+    }
+}

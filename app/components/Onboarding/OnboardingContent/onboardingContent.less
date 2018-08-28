@@ -1,0 +1,113 @@
+.content {
+    color: #383838;
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    h1 {
+        margin: 0 0 12px;
+    }
+
+    p {
+        max-width: 260px;
+        margin: auto;
+    }
+
+    .button {
+        min-width: 240px;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .plans {
+        display: flex;
+        justify-content: space-between;
+
+        .item {
+            border-radius: 2px;
+            width: 174px;
+            padding: 16px 20px;
+            cursor: pointer;
+
+            .title {
+                margin-top: 8px;
+                font-weight: 500;
+            }
+
+            &:hover, &.selected {
+                background: #DFDFDF;
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+            }
+        }
+    }
+
+    .slider-wrapper {
+        width: 400px;
+        margin: 30px auto;
+
+        .rc-slider-rail {
+            background-color: #979797;
+            height: 2px;
+        }
+
+        .rc-slider-track {
+            background-color: transparent;
+        }
+
+        .rc-slider-step {
+            .rc-slider-dot {
+                display: none;
+            }
+        }
+
+        .rc-slider-handle {
+            width: 24px;
+            height: 24px;
+            background-color: #45A8E4;
+            border: solid 1px #585E61;
+            margin-top: -12px;
+            margin-left: -12px;
+
+            &:active {
+                box-shadow: 0 0 5px #585E61;
+            }
+        }
+
+        .rc-slider-mark {
+            .rc-slider-mark-text, .rc-slider-mark-text-active {
+                color: #979797;
+
+                &:hover {
+                    color: #585E61;
+                }
+            }
+        }
+    }
+
+    .team-size-info {
+        font-weight: 700;
+        font-size: 26px;
+        margin-top: 10px;
+    }
+
+    .summary {
+        .plan-info {
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .size-info {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .disclaimer {
+            font-size: 12px;
+            margin: 12px 0;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.template-tag {
+    display: inline-block;
+    white-space: nowrap;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+    border: 1px solid #9b9b9b;
+    background: #EEEEEE;
+    color: #4a4a4a;
+    padding: 0 6px;
+    border-radius: 2px;
+    font-size: 14px;
+    margin-right: 5px;
+    height: 23px;
+
+    .delete {
+        cursor: pointer;
+        margin-right: -6px;
+        position: relative;
+        top: -1px;
+
+        &:hover {
+            color: #EBEBEB;
+        }
+    }
+}

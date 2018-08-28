@@ -1,0 +1,117 @@
+.date-range-picker-calendar {
+    .date-range-picker-calendar-calendar {
+        user-select: none;
+        width: 100%;
+        margin: 12px auto;
+        font-size: 14px;
+        color: #3c3c3c;
+
+        .picker-header {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+            align-items: center;
+
+            .month {
+                margin: 0 14px;
+                font-weight: 500;
+                text-transform: uppercase;
+                text-align: center;
+                width: 140px;
+            }
+
+            .arrow {
+                font-size: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #9C9C9C;
+                }
+
+                &.next {
+                    transform: rotate(90deg);
+                }
+
+                &.prev {
+                    transform: rotate(270deg);
+                }
+            }
+        }
+
+        .body {
+            .days-names, .week {
+                display: flex;
+                justify-content: center;
+                font-size: 12px;
+                text-align: center;
+
+                .day {
+                    text-align: center;
+                    width: 35px;
+                    margin-bottom: 4px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .day-number {
+                        border-radius: 50%;
+                        width: 25px;
+                        height: 25px;
+                        line-height: 25px;
+                    }
+
+                    &:hover {
+                        .day-number {
+                            background: #EBEBEB;
+                        }
+                    }
+
+                    &.disabled {
+                        color: #9C9C9C;
+                    }
+
+                    &.today {
+                        .day-number {
+                            color: #5cc7bd;
+                        }
+                    }
+
+                    &.selected {
+                        .day-number {
+                            background: #5cc7bd;
+                            color: #fff;
+                        }
+                    }
+
+                    &.in-range {
+                        background: #5cc7bd;
+
+                        .day-number {
+                            color: #fff;
+                        }
+                    }
+
+                    &.selected.in-range {
+
+                        &.start {
+                            border-top-left-radius: 12px;
+                            border-bottom-left-radius: 12px;
+                        }
+
+                        &.end {
+                            border-top-right-radius: 12px;
+                            border-bottom-right-radius: 12px;
+                        }
+                    }
+                }
+            }
+
+            .days-names {
+                color: #9C9C9C;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

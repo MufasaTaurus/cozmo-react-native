@@ -1,0 +1,87 @@
+@spacing: 8px;
+
+.yelp-autocomplete {
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+
+    &-icon {
+        position: absolute;
+        margin-top: 6px;
+        margin-left: 8px;
+        color: #b2b2b2;
+    }
+
+    &-input {
+        padding: 8px 18px 8px 36px;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+        outline: none;
+        background: #fff;
+        width: 100%;
+        font-size: 12px;
+    }
+
+    &-predictions {
+        background: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+        max-height: 166px;
+        overflow: auto;
+        position: absolute;
+        margin-top: 2px;
+        width: 100%;
+        z-index: 2;
+
+        &-items {
+
+            &-item {
+                padding: 0 @spacing;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                .pin-icon {
+                    margin-right: 6px;
+                    color: #B2B2B2;
+                }
+
+                .address {
+                    border-bottom: 1px solid #B2B2B2;
+                    flex: 1;
+                    padding: @spacing 0;
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    overflow: hidden;
+
+                    .name {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .street {
+                        color: #BFBFBF;
+                        font-size: 12px;
+                        padding-left: 6px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+
+                &:hover {
+                    background: #EBEBEB;
+                }
+
+                &:last-child {
+                    .address {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}

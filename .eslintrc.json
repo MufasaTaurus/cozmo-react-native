@@ -1,0 +1,63 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "jest": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "redux-saga",
+    "react",
+    "jsx-a11y"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      4,
+      { "SwitchCase": 1 }
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "object-curly-spacing": [
+        "error",
+        "always",
+        {
+            "arraysInObjects": true,
+            "objectsInObjects": true
+        }
+    ],
+    "space-in-parens": [
+        "error",
+        "never"
+    ],
+    "keyword-spacing": [
+        "error",
+        { "before": true }
+    ],
+    "space-infix-ops": "error",
+    "no-unneeded-ternary": "error",
+    "import/imports-first": 0,
+    "import/newline-after-import": 0,
+    "react/jsx-uses-vars": 2,
+    "react/jsx-curly-spacing": [2, "always"]
+  }
+}

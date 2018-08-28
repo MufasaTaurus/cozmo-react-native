@@ -1,0 +1,107 @@
+.inbox-guest-tickets {
+    padding: 20px;
+
+    .tickets-table {
+        width: 100%;
+        background: #fff;
+
+        &-header {
+            .headers td {
+                color: #9e9e9e;
+                font-size: 12px;
+                font-weight: 600;
+                padding: 12px 0;
+                border-bottom: 1px solid #E9E9E9;
+            }
+        }
+
+        &-body {
+            .ticket {
+                td {
+                    padding: 8px 0;
+                    border-bottom: 1px solid #E9E9E9;
+
+                    &.id {
+                        color: #3c3c3c;
+                        font-size: 14px;
+                        font-weight: 500;
+                        width: 100px;
+
+                        .priority {
+                            border-radius: 50%;
+                            display: inline-block;
+                            width: 10px;
+                            height: 10px;
+                            margin-right: 5px;
+
+                            &.urgent {
+                                background: #ff4754;
+                            }
+
+                            &.high {
+                                background: #ff6900;
+                            }
+
+                            &.medium {
+                                background: #00a5ff;
+                            }
+
+                            &.low {
+                                background: #00bfac;
+                            }
+                        }
+                    }
+
+                    &.type {
+                        color: #9e9e9e;
+                        font-size: 13px;
+                        font-weight: 500;
+                        width: 100px;
+                    }
+
+                    &.status {
+                        width: 100px;
+                    }
+
+                    &.assign {
+                        width: 180px;
+                    }
+
+                    &.date {
+                        font-size: 12px;
+                        width: 90px;
+
+                        .date {
+                            font-weight: 500;
+                            color: #757575;
+                        }
+                        .time {
+
+                            font-weight: 300;
+                            color: #5c5c5c;
+                        }
+                    }
+
+                    &.subject {
+                        .reporter {
+                            font-size: 15px;
+                            font-weight: 500;
+                            color: #232323;
+                        }
+
+                        .subject {
+                            font-size: 14px;
+                            font-weight: 300;
+                            color: #5c5c5c;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tickets-pagination {
+        margin-top: 20px;
+        text-align: right;
+    }
+}

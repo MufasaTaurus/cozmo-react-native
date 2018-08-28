@@ -1,0 +1,90 @@
+.drag-and-drop-photo-container {
+    background: #F6FCFB;
+    color: #505050;
+    border-top: 1px dashed #61C7BD;
+    border-bottom: 1px dashed #61C7BD;
+    height: 250px;
+
+    .d-n-d-content {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        .d-n-d-drop {
+            display: flex;
+            align-items: baseline;
+
+            .d-n-d-icon {
+                color: #61C7BD;
+                margin: 14px;
+            }
+
+            .d-n-d-title {
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 2.8px;
+                text-transform: uppercase;
+            }
+
+            .d-n-d-subtitle {
+                font-size: 13px;
+                color: #a7a7a7;
+            }
+        }
+
+        .d-n-d-or {
+            margin: 24px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            color: #9b9b9b;
+            text-transform: uppercase;
+        }
+
+        .d-n-d-input {
+            margin: 24px;
+            border-radius: 2px;
+            background: #5cc7bd;
+            width: 150px;
+            height: 50px;
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+                background: #AEE7E2;
+            }
+
+            .image-uploader {
+                margin-top: -8px;
+            }
+
+            .d-n-d-button {
+                text-align: center;
+                line-height: 50px;
+                font-size: 14px;
+                color: #fff;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                z-index: -1;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    &.add {
+        background: #AEE7E2;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 140px;
+
+        .add-icon {
+            margin-right: 5px;
+            position: relative;
+            top: -2px;
+        }
+    }
+}

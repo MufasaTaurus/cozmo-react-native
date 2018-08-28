@@ -1,0 +1,69 @@
+.calendars-create-new-event-rates {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .loader {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .event-rates-content {
+        flex: 1;
+        overflow: auto;
+
+        .dates {
+            border: 1px solid #c4c4c4;
+            border-radius: 2px;
+            padding: 10px;
+            color: #696969;
+            font-size: 14px;
+
+            .separator {
+                margin: 0 12px;
+            }
+
+            .date {
+                display: inline-block;
+                position: relative;
+            }
+        }
+
+        .side-by-side {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .small {
+            width: 182px;
+        }
+
+        .vj-subsection-header {
+            margin-bottom: 20px;
+
+            &.price {
+                margin-bottom: 10px;
+            }
+        }
+
+        .section {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 20px 40px 40px;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+}

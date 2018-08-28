@@ -1,0 +1,90 @@
+.cleaner-picker-group {
+    .cleaner-picker-label {
+        color: #9b9b9b;
+        font-size: 12px;
+    }
+
+    .cleaner-picker {
+        width: 100%;
+        border: solid 1px #c4c4c4;
+        border-radius: 2px;
+        position: relative;
+        background: #fff;
+        z-index: 3;
+        user-select: none;
+        height: 38px;
+
+        .cleaner-picker-selected-cleaner {
+            cursor: pointer;
+            padding: 0 15px;
+            color: #9e9e9e;
+            font-size: 14px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .value {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                padding-right: 16px;
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+
+            .arrow-down {
+                color: #616161;
+                font-size: 20px;
+                margin-top: 3px;
+            }
+        }
+
+        .cleaner-picker-dropdown {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+            position: absolute;
+            width: 100%;
+            margin-top: 2px;
+            background: #fff;
+            max-height: 300px;
+            overflow: auto;
+            border-radius: 2px;
+            margin-bottom: 5px;
+            font-size: 14px;
+
+            .search-box-wrapper {
+                padding: 13px 16px;
+
+                .search-box-input {
+                    box-shadow: none;
+                    border: solid 1px #c4c4c4;
+                }
+            }
+
+            .cleaner-picker-cleaners {
+                padding: 6px 0;
+                height: 104px;
+                overflow: auto;
+
+                .title {
+                    font-size: 11px;
+                    font-weight: 600;
+                    color: #4a4a4a;
+                    text-transform: uppercase;
+                    padding-left: 10px;
+                    margin-top: 6px;
+                }
+
+                &-cleaner {
+                    padding: 6px 14px;
+                    cursor: pointer;
+                    color: #000;
+
+                    &:hover {
+                        background: #E3F2FC;
+                    }
+                }
+            }
+        }
+    }
+}

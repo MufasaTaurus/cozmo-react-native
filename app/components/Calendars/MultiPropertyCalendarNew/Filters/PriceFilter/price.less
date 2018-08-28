@@ -1,0 +1,34 @@
+.price-filter {
+    .form {
+        width: 414px;
+        display: flex;
+
+        .space {
+            margin-left: 10px;
+        }
+
+        .disabled {
+            width: 454px;
+            height: 153px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #686868;
+            font-weight: 400;
+
+            &-icon {
+                transform: rotate(180deg);
+                color: #ef5350;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &.disabled {
+        .actions {
+            display: none!important;
+        }
+    }
+}

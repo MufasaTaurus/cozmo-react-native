@@ -1,0 +1,73 @@
+.owner-details-contract-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .owner-details-contract {
+        flex: 1;
+        height: 100%;
+        overflow: auto;
+
+        .owner-details-contract-content {
+            width: 854px;
+            background: #fff;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+            min-height: 856px;
+            margin: 10px;
+
+            .step-header {
+                padding: 0 40px 0 8px;
+                font-size: 20px;
+                font-weight: 500;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                color: #37474f;
+                border-bottom: 1px solid #dddddd;
+                position: relative;
+
+                .step-header-icon {
+                    margin-right: 8px;
+                    position: relative;
+                    top: -2px;
+                }
+            }
+
+            .section {
+                padding: 20px 40px 40px 40px;
+                border-bottom: 1px solid #dddddd;
+
+                .section-title {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #505050;
+                    margin-bottom: 12px;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+
+            .contract-info {
+                width: 260px;
+            }
+
+            .commission {
+                width: 168px;
+            }
+
+            .text-field-group {
+
+                .text-field {
+                    padding-right: 50px;
+                }
+
+                .text-field-addon-right {
+                    width: 40px;
+                    margin-left: -40px;
+                }
+            }
+        }
+    }
+}

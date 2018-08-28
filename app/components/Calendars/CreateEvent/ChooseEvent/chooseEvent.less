@@ -1,0 +1,49 @@
+.calendars-create-new-event-choose-event {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .choose-event-content {
+        flex: 1;
+        overflow: auto;
+        padding: 20px 40px;
+
+        .event-types {
+            font-size: 14px;
+            font-weight: 500;
+            color: #696969;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+
+            .event {
+                padding: 20px;
+                border-bottom: 1px solid #ddd;
+                cursor: pointer;
+
+                &:hover {
+                    background: #fafafa;
+                    font-weight: 700;
+
+                    .event-icon {
+                        color: #5cc7bd;
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .event-icon {
+                    margin-right: 20px;
+                    color: #cfd8dc;
+                }
+            }
+        }
+    }
+
+    .actions {
+        text-align: center;
+        padding: 20px 40px;
+    }
+}

@@ -1,0 +1,86 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    branches:
+      only:
+        - master
+        - staging
+        - dev
+        - dev2
+        - /feature\/.*/
+        - /fix\/.*/
+    working_directory: ~/app
+    steps:
+      - checkout
+      - add_ssh_keys
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Run tests
+          command: npm test
+      - run:
+          name: Build
+          command: |
+            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "dev2" ]];
+            then
+                npm run build:dev
+            else
+                if [[ "${CIRCLE_BRANCH}" == "staging" ]];
+                then
+                    npm run build:staging
+                else
+                    npm run build
+                fi
+            fi
+      - deploy:
+          name: Deploy to Azure
+          command: |
+            if [[ "${CIRCLE_BRANCH}" == "master" ]];
+            then
+                cd build
+                git init
+                git config --global user.email "circle@voyajoy.com"
+                git config --global user.name "CircleCI"
+                git remote add origin git@github.com:voyajoy/cozmo-web-staging.git
+                git add *
+                git commit -m "deploy" -ammend
+                git push -u origin master --force
+            fi
+            if [[ "${CIRCLE_BRANCH}" == "staging" ]];
+            then
+                cd build
+                git init
+                git config --global user.email "circle@voyajoy.com"
+                git config --global user.name "CircleCI"
+                git remote add origin git@github.com:voyajoy/cozmo-web-staging.git
+                git checkout -B staging
+                git add .
+                git commit -m "deploy" -ammend
+                git push -u origin staging --force
+            fi
+            if [[ "${CIRCLE_BRANCH}" == "dev" ]];
+            then
+                cd build
+                git init
+                git config --global user.email "circle@voyajoy.com"
+                git config --global user.name "CircleCI"
+                git remote add origin git@github.com:voyajoy/cozmo-web-staging.git
+                git checkout -B dev
+                git add .
+                git commit -m "deploy" -ammend
+                git push -u origin dev --force
+            fi
+            if [[ "${CIRCLE_BRANCH}" == "dev2" ]];
+            then
+                cd build
+                git init
+                git config --global user.email "circle@voyajoy.com"
+                git config --global user.name "CircleCI"
+                git remote add origin git@github.com:voyajoy/cozmo-web-staging.git
+                git checkout -B dev2
+                git add .
+                git commit -m "deploy" -ammend
+                git push -u origin dev2 --force
+            fi

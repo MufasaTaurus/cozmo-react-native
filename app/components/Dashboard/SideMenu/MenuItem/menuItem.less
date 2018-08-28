@@ -1,0 +1,33 @@
+.menu-item {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: inherit;
+    font-weight: 500;
+
+    .icon-wrapper {
+        margin: 0 20px 5px 20px;
+    }
+
+    .label-wrapper {
+        transition: margin 700ms;
+    }
+
+    .slide-off {
+        margin-left: 100px;
+    }
+
+    &:hover {
+        text-decoration: none;
+        background: #AAB3B4;
+    }
+
+    &.active {
+        background: #64b5f6;
+    }
+}

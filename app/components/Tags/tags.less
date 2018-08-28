@@ -1,0 +1,35 @@
+.tags-popup-wrapper {
+    position: relative;
+
+    .tags-popup {
+        position: absolute;
+        font-size: 12px;
+        min-width: 180px;
+        width: 100%;
+        min-height: 30px;
+        max-height: 200px;
+        overflow: auto;
+        background: #fff;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+
+        .tag {
+            padding: 8px 16px;
+            cursor: pointer;
+
+            &:hover {
+                background: #EBEBEB;
+            }
+        }
+
+        .add-section {
+            border-top: 1px solid #EDEDED;
+            padding: 8px 16px;
+            cursor: pointer;
+            color: #7d7d7d;
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}

@@ -1,0 +1,352 @@
+.import-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+
+    .import-dialog {
+        width: 779px;
+        background: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+        overflow: hidden;
+
+        &.step-0 {
+
+            .subtitle-content {
+                padding: 40px 0;
+                text-align: center;
+                color: #fff;
+
+                .title {
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: 600;
+                    letter-spacing: 2.8px;
+                }
+
+                .subtitle {
+                    margin: 0 150px;
+                    font-size: 13px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &.step-2 {
+
+            .body {
+                padding: 0 220px;
+            }
+        }
+
+        &.step-1, &.step-2, &.step-3 {
+            .body {
+                min-height: 410px;
+            }
+        }
+
+        &.step-4, &.step-5 {
+
+            .desc {
+                margin: 80px 180px 33px;
+            }
+
+            .header-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .logo-wrapper {
+                    margin-top: 43px;
+                    height: 65px;
+                }
+
+                .title {
+                    display: flex;
+                    color: #ffffff;
+
+                    .title-text {
+                        display: flex;
+                        align-items: left;
+                        flex-direction: column;
+                        font-size: 36px;
+                        font-weight: 600;
+                        letter-spacing: -1px;
+                        margin: 12px 16px;
+
+                        .subtitle {
+                            text-transform: uppercase;
+                            font-size: 24px;
+                            font-weight: 600;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            .send-again {
+                margin-top: 8px;
+                text-align: right;
+                font-size: 14px;
+                font-weight: 200;
+                color: #363636;
+
+                .send-again-link {
+                    color: #3ea7e6;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #92CBF7;
+                    }
+                }
+            }
+        }
+
+        .import-dialog-step {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+
+            .logo-wrapper {
+                height: 30px;
+            }
+
+            .login-logo {
+                height: 50px;
+                margin-top: 40px;
+                margin-bottom: 15px;
+            }
+
+            .body {
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #fbfbfb;
+                border: 1px solid #ddd;
+                border-top: none;
+                padding-bottom: 47px;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 400;
+                color: #696969;
+
+                .search-box-wrapper {
+                    padding: 25px 0;
+                }
+
+                .button-new {
+                    margin-top: 20px;
+                }
+
+                .tools {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    max-width: 600px;
+
+                    .tool {
+                        min-width: 131px;
+                        max-width: 131px;
+                        min-height: 115px;
+                        max-height: 115px;
+                        margin: 5px;
+                        background: #fff;
+                        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        cursor: pointer;
+
+                        .logo-wrapper {
+                            margin-top: 22px;
+                        }
+
+                        .title {
+                            font-size: 16px;
+                            font-weight: 400;
+                            letter-spacing: -0.5px;
+                            color: #505050;
+                            margin-bottom: 11px;
+                        }
+
+                        &:hover {
+                            background: #E5E5E5;
+                            box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.28);
+                        }
+                    }
+                }
+
+                .methods {
+                    text-align: left;
+                    margin-bottom: 25px;
+                }
+
+                form {
+                    width: 262px;
+                    margin: 5px auto 25px;
+
+                    .input {
+                        margin-top: 15px;
+                    }
+                }
+
+                .disabler {
+                    position: absolute;
+                    background: rgba(255, 255, 255, 0.75);
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+                }
+
+                .error-msg {
+                    color: red;
+                }
+
+                .listing-title {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #505050;
+                    text-align: left;
+                    padding: 37px 0 17px;
+
+                    span {
+                        font-size: 12px;
+                        font-style: normal;
+                        color: #9e9e9e;
+                    }
+                }
+
+                .listing-list {
+                    min-width: 678px;
+                    max-width: 678px;
+                    max-height: 442px;
+                    text-align: left;
+                    overflow: auto;
+                    font-size: 12px;
+                    font-style: normal;
+                    color: #9e9e9e;
+
+                    table {
+                        width: 100%;
+                        height: 100%;
+                        text-align: left;
+
+                        tbody {
+
+                            tr:hover {
+                                background: #E5E5E5;
+                            }
+                        }
+
+                        tr {
+                            width: 100%;
+                            border: 1px solid #E5E5E5;
+
+                            .cell-wrapper {
+                                display: flex;
+                                height: 100%;
+                                align-items: center;
+                                justify-content: left;
+
+                                .vj-checkbox {
+                                    margin: 13px;
+                                }
+                            }
+
+                            th {
+                                min-height: 37px;
+                                max-height: 37px;
+                                overflow: hidden;
+                            }
+
+                            td {
+                                min-height: 45px;
+                                max-height: 45px;
+                                font-size: 15px;
+                                overflow: hidden;
+
+                                .image {
+                                    margin-right: 13px;
+                                    border-radius: 50%;
+                                }
+                            }
+
+                            .name {
+                                color: #4a4a4a;
+                            }
+
+                            .address {
+                                min-width: 100px;
+                            }
+                        }
+                    }
+                }
+
+                .empty-listing {
+                    height: 300px;
+                    vertical-align: center;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    font-size: 36px;
+                    font-weight: 600;
+                    letter-spacing: -1px;
+                }
+            }
+            .footer {
+                display: flex;
+                min-height: 210px;
+
+                .left {
+                    border-right: 1px solid #dddddd;
+                }
+
+                .side {
+                    min-width: 389px;
+                    max-width: 389px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 45px;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #5c5c5c;
+
+                    .face-icon {
+                        color: #64b5f6;
+                        margin-bottom: 16px;
+                    }
+
+                    .title {
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #696969;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .buttons {
+
+                    .small {
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

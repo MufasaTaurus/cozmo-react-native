@@ -1,0 +1,146 @@
+.calendar-preview {
+    user-select: none;
+    width: 350px;
+    margin: 12px auto;
+    font-size: 14px;
+
+    .header {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+        align-items: center;
+
+        .month {
+            margin: 0 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: center;
+            width: 140px;
+        }
+
+        .arrow {
+            font-size: 20px;
+            cursor: pointer;
+
+            &:hover {
+                color: #9C9C9C;
+            }
+
+            &.next {
+                transform: rotate(90deg);
+            }
+
+            &.prev {
+                transform: rotate(270deg);
+            }
+        }
+    }
+
+    .body {
+        .days-names, .week {
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                text-align: center;
+                width: 50px;
+                margin-bottom: 8px;
+
+                &.disabled {
+                    color: #9C9C9C;
+                }
+
+                &.has-event {
+                    background: #5cc7bd;
+                    color: #fff;
+                }
+
+                &.start {
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+
+                &.end {
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+
+                &.in-other-event {
+                    border-radius: 0!important;
+                }
+            }
+
+            &.pink {
+               div.has-event {
+                   background: #fe7b76;
+               }
+            }
+
+            &.yellow {
+               div.has-event {
+                   background: #ffb400;
+               }
+            }
+
+            &.green {
+               div.has-event {
+                   background: #5b9b44;
+               }
+            }
+
+            &.darkblue {
+               div.has-event {
+                   background: #1f3975;
+               }
+            }
+
+            &.darkviolet {
+               div.has-event {
+                   background: #68306d;
+               }
+            }
+
+            &.red {
+               div.has-event {
+                   background: #d44d5b;
+               }
+            }
+
+            &.brown {
+               div.has-event {
+                   background: #ba8f00;
+               }
+            }
+
+            &.greyish {
+               div.has-event {
+                   background: #5cc7bd;
+               }
+            }
+
+            &.blue {
+               div.has-event {
+                   background: #42a5f5;
+               }
+            }
+
+            &.violet {
+               div.has-event {
+                   background: #9b88b8;
+               }
+            }
+
+            &.grey {
+                div.has-event {
+                    background: #757575;
+                }
+            }
+        }
+
+        .days-names {
+            color: #9C9C9C;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+    }
+}

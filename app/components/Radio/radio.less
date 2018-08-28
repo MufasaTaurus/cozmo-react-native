@@ -1,0 +1,69 @@
+.vj-radio-button {
+    font-size: 14px;
+    margin: 5px 0;
+
+    [type="radio"]:checked,
+    [type="radio"]:not(:checked) {
+        position: absolute;
+        left: -9999px;
+    }
+
+    [type="radio"]:checked + label,
+    [type="radio"]:not(:checked) + label {
+        position: relative;
+        padding-left: 24px;
+        cursor: pointer;
+        line-height: 18px;
+        display: inline-block;
+        color: #696969;
+
+        &:hover {
+            color: #000000;
+        }
+    }
+
+    [type="radio"]:checked + label {
+        font-weight: 500;
+        color: #505050;
+    }
+
+    [type="radio"]:checked + label:before,
+    [type="radio"]:not(:checked) + label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #979797;
+        border-radius: 100%;
+        background: #fff;
+    }
+
+    [type="radio"]:checked + label:before {
+        background: #68B6F3;
+    }
+
+    [type="radio"]:checked + label:after,
+    [type="radio"]:not(:checked) + label:after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        border-radius: 100%;
+        transition: all 0.2s ease;
+    }
+
+    [type="radio"]:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    [type="radio"]:checked + label:after {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

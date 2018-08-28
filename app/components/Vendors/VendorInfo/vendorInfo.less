@@ -1,0 +1,138 @@
+.vendor-info {
+    .content {
+        padding: 10px;
+
+        .section-header {
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 500;
+            color: #37474f;
+            border-bottom: 1px solid #dddddd;
+
+            .section-header-icon {
+                margin-right: 5px;
+                position: relative;
+                top: -2px;
+
+                &.edit {
+                    float: right;
+                    margin-right: 0;
+                    color: #696969;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        .empty-state {
+            font-style: italic;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .search {
+            background: #fafafa;
+            padding: 8px 30px;
+        }
+
+        .combined-sections {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+
+            .cleaner-info {
+                width: 335px;
+                margin-left: 10px;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+                background: #fff;
+
+                .header {
+                    border-bottom: 1px solid #e5e5e5;
+                    padding: 15px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #37474f;
+                    display: flex;
+                    align-items: center;
+
+                    .icon {
+                        color: #00b0a3;
+                        margin-right: 5px;
+                    }
+                }
+
+                .content {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #9b9b9b;
+                    display: flex;
+                    padding: 30px 20px;
+                    align-items: center;
+
+                    .image {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        margin-right: 15px;
+                    }
+
+                    .info {
+                        .name {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #4a4a4a;
+                        }
+                    }
+                }
+
+                .cleaner-info-form {
+                    padding: 20px 40px;
+
+                    .submit {
+                        text-align: right;
+                        margin-top: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .assigned-properties {
+                height: 100%;
+                width: 665px;
+                background: #fff;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+                min-height: 180px;
+
+                .cleaning-fee {
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #4a4a4a;
+                }
+            }
+
+        }
+
+        .jobs {
+            width: 1010px;
+            background: #fff;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .short {
+            width: 50%;
+            display: inline-block;
+            margin: -20px 0;
+
+            &.first {
+                padding-right: 10px;
+            }
+
+            &.second {
+                padding-left: 10px;
+            }
+        }
+    }
+}

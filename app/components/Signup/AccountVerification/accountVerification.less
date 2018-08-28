@@ -1,0 +1,36 @@
+.signup-account-verification {
+    height: 100%;
+
+    .box-with-logo {
+        position: relative;
+    }
+
+    .disabler {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.75);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+
+    .info {
+        font-size: 16px;
+        text-align: center;
+        color: #505050;
+        margin-top: -40px;
+        margin-bottom: 50px;
+
+        @media only screen and (max-width: 479px) {
+            margin-top: -10px;
+        }
+    }
+
+    .button-new {
+        width: 100%;
+    }
+}

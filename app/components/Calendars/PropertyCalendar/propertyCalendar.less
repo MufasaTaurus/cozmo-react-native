@@ -1,0 +1,463 @@
+.monthly-calendar {
+    user-select: none;
+    overflow: hidden;
+    position: relative;
+
+    .disabler {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.7);
+        z-index: 1;
+
+        .vj-spinner-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        padding: 0 30px;
+
+        .left, .right{
+           flex: 1;
+        }
+
+        .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-left {
+                display: flex;
+                align-items: center;
+
+                .arrows {
+                    display: flex;
+
+                    .arrow {
+                        height: 30px;
+                        width: 40px;
+                        border: 1px solid #c4c4c4;
+                        border-radius: 2px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #626262;
+                        cursor: pointer;
+                    }
+
+                    .arrow-right {
+                        transform: rotate(180deg);
+                        margin-left: 5px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            &-right {}
+        }
+    }
+
+    .table-calendar {
+
+        .table-header {
+            display: flex;
+            height: 48px;
+            border-top: solid 1px #ddd;
+            border-bottom: solid 1px #ddd;
+
+            &-day {
+                width: 145px;
+                border-right: solid 1px #ddd;
+                font-size: 14px;
+                font-weight: 500;
+                color: #696969;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+
+        .rows {
+
+            .row {
+                height: 145px;
+                display: flex;
+                border-bottom: solid 1px #ddd;
+
+                .day {
+                    width: 145px;
+                    border-right: solid 1px #ddd;
+                    background: #fafafa;
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+
+                    &:hover {
+                        background: #bbdefb;
+                    }
+
+                    &.start {
+                        background: linear-gradient(to bottom right, #fafafa 0%, #fafafa 50%, #e1e7eb 50%, #e1e7eb 100%);
+                    }
+
+                    &.end {
+                        background: linear-gradient(to bottom right, #e1e7eb 0%, #e1e7eb 50%, #fafafa 50%, #fafafa 100%);
+
+                        &:hover {
+                            background: #bbdefb;
+                        }
+                    }
+
+                    &.start.end {
+                        background: #e1e7eb;
+                        border-color: transparent;
+                    }
+
+                    &.has-event {
+                        background: #e1e7eb;
+                    }
+
+                    &.seasonal {
+                        background: linear-gradient(to bottom right,
+                        #EDF3FF 0%, #EDF3FF 5%,
+                        #fafafa 5%, #fafafa 6%,
+                        #EDF3FF 6%, #EDF3FF 10%,
+                        #fafafa 10%, #fafafa 11%,
+                        #EDF3FF 11%, #EDF3FF 15%,
+                        #fafafa 15%, #fafafa 16%,
+                        #EDF3FF 16%, #EDF3FF 20%,
+                        #fafafa 20%, #fafafa 21%,
+                        #EDF3FF 21%, #EDF3FF 25%,
+                        #fafafa 25%, #fafafa 26%,
+                        #EDF3FF 26%, #EDF3FF 30%,
+                        #fafafa 30%, #fafafa 31%,
+                        #EDF3FF 31%, #EDF3FF 35%,
+                        #fafafa 35%, #fafafa 36%,
+                        #EDF3FF 36%, #EDF3FF 40%,
+                        #fafafa 40%, #fafafa 41%,
+                        #EDF3FF 41%, #EDF3FF 45%,
+                        #fafafa 45%, #fafafa 46%,
+                        #EDF3FF 46%, #EDF3FF 50%,
+                        #fafafa 50%, #fafafa 51%,
+                        #EDF3FF 51%, #EDF3FF 55%,
+                        #fafafa 55%, #fafafa 56%,
+                        #EDF3FF 56%, #EDF3FF 60%,
+                        #fafafa 60%, #fafafa 61%,
+                        #EDF3FF 61%, #EDF3FF 65%,
+                        #fafafa 65%, #fafafa 66%,
+                        #EDF3FF 66%, #EDF3FF 70%,
+                        #fafafa 70%, #fafafa 71%,
+                        #EDF3FF 71%, #EDF3FF 75%,
+                        #fafafa 75%, #fafafa 76%,
+                        #EDF3FF 76%, #EDF3FF 80%,
+                        #fafafa 80%, #fafafa 81%,
+                        #EDF3FF 81%, #EDF3FF 85%,
+                        #fafafa 85%, #fafafa 86%,
+                        #EDF3FF 86%, #EDF3FF 90%,
+                        #fafafa 90%, #fafafa 91%,
+                        #EDF3FF 91%, #EDF3FF 95%,
+                        #fafafa 95%, #fafafa 96%,
+                        #EDF3FF 96%, #EDF3FF 100%,
+                        );
+
+                        .day-bottom {
+                            .day-nights, .day-price {
+                                color: #1e88e5;
+                            }
+                        }
+                    }
+
+                    &.selected {
+                        background: #bbdefb;
+                    }
+
+                    &.selected.first-or-last {
+                        background: #90caf9;
+                    }
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    .day-top {
+                        width: 100%;
+                        padding: 5px;
+
+                        .day-number {
+                            font-size: 15px;
+                            font-weight: 500;
+                            color: #37474f;
+                            height: 18px;
+
+                            .today-label {
+                                font-size: 15px;
+                                font-weight: 500;
+                                color: #37474f;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+
+                    .day-middle {
+                        flex: 1;
+                        width: 100%;
+
+                        .icals {
+                            height: 0;
+                            overflow: visible;
+
+                            .calendar-event-property {
+                                //height: 27px;
+                                margin-bottom: 1px;
+
+                                .event-content {
+                                    margin-left: 94px;
+                                    min-width: 50px;
+                                }
+
+                                &.index-1, &.index-4 {
+                                    .event-content {
+                                        margin-left: 66px;
+                                        margin-top: 28px;
+                                    }
+                                }
+
+                                &.index-2 {
+                                    .event-content {
+                                        margin-left: 38px;
+                                        margin-top: 56px;
+                                    }
+                                }
+
+                                &.index-3 {
+                                    .event-content {
+                                        margin-left: 10px;
+                                        margin-top: 84px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .reservations {
+                            margin-top: 28px;
+
+                            .calendar-event-property .event-content {
+                                margin-left: 66px;
+                            }
+                        }
+
+                        .blockings {
+                            margin-top: 56px;
+
+                            .calendar-event-property .event-content {
+                                margin-left: 38px;
+                            }
+                        }
+                    }
+
+                    .day-bottom {
+                        width: 100%;
+                        padding: 0 5px;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+
+                        .day-nights {
+                            display: flex;
+                            align-items: center;
+                            font-size: 15px;
+                            color: #acacac;
+                            padding: 0 10px;
+
+                            &-icon {
+                                margin-bottom: 5px;
+                                position: relative;
+                                top: 1px;
+                                right: 2px;
+                            }
+                        }
+
+                        .day-price {
+                            font-size: 17px;
+                            color: #37474f;
+                        }
+
+                        &.overridden {
+                            .day-price {
+                                color: #d65f5f;
+                            }
+                        }
+                    }
+
+                    .red {
+                        .day-nights {
+                            color: #D56465;
+                        }
+
+                        .day-price {
+                            color: #D56465;
+                        }
+                    }
+
+                    .blue {
+                        .day-nights, .day-price {
+                            color: #1e88e5;
+                        }
+                    }
+
+                    &.disabled {
+                        .day-number {
+                            color: #b8bdc0;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .monthly-calendar {
+
+        .header {
+            height: 50px;
+            padding: 0 20px;
+
+            .green {
+                display: none;
+            }
+        }
+
+        .table-calendar {
+
+            .table-header {
+                height: 28px;
+
+                &-day {
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+
+            .rows {
+                .row {
+                    height: 100px;
+
+                    .day {
+                        font-size: 12px;
+
+                        &.start {
+                            background: linear-gradient(to right, #fafafa 0%, #fafafa 50%, #e1e7eb 50%, #e1e7eb 100%);
+                        }
+
+                        &.end {
+                            background: linear-gradient(to right, #e1e7eb 0%, #e1e7eb 50%, #fafafa 50%, #fafafa 100%);
+                        }
+
+                        &.start.end {
+                            background: #e1e7eb;
+                            border-color: transparent;
+                        }
+
+                        &.has-event {
+                            background: #e1e7eb;
+                        }
+
+                        .day-top {
+                            width: 100%;
+                            padding: 5px;
+
+                            .day-number {
+                                font-size: 12px;
+                                height: 14px;
+                                text-align: center;
+
+                                .today-label {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        &.today {
+                            .day-top {
+                                .day-number {
+                                    color: #4a90e2;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+
+                        .day-middle {
+
+                            .icals {
+                                height: 0;
+                                overflow: visible;
+
+                                .calendar-event-property {
+                                    margin-bottom: 1px;
+
+                                    .event-content {
+                                        margin-left: 50%;
+                                        min-width: unset;
+                                    }
+
+                                    &.index-1, &.index-4 {
+                                        .event-content {
+                                            margin-left: 50%;
+                                            margin-top: 17px;
+                                        }
+                                    }
+
+                                    &.index-2 {
+                                        .event-content {
+                                            margin-left: 50%;
+                                            margin-top: 34px;
+                                        }
+                                    }
+
+                                    &.index-3{
+                                        .event-content {
+                                            margin-left: 50%;
+                                            margin-top: 51px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .blockings {
+                                margin-top: 35px;
+
+                                .calendar-event-property .event-content {
+                                    margin-left: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+.vendors-monthly-calendar {
+    width: 770px;
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+
+    .calendar-header {
+        padding: 2px 16px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .dates {
+            font-size: 17px;
+            font-weight: 500;
+            color: #37474f;
+            user-select: none;
+            text-align: center;
+
+            .period {
+                width: 200px;
+                display: inline-block;
+                text-align: center;
+            }
+
+            .arrow {
+                display: inline-block;
+                margin: 0 20px;
+                position: relative;
+                top: -2px;
+                cursor: pointer;
+                width: 20px;
+
+                &.prev {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                &:hover {
+                    color: #546e7a;
+                }
+            }
+        }
+
+        .switcher {
+            display: flex;
+            position: absolute;
+            right: 16px;
+            user-select: none;
+
+            .option {
+                padding: 5px 14px;
+                font-size: 14px;
+                font-weight: 500;
+                color: #90a4ae;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #4a4a4a;
+                }
+
+                &.active {
+                    background: #e3f2fd;
+                    color: #64b5f6;
+                }
+            }
+        }
+    }
+
+    .calendar {
+        .header {
+            border-top: solid 1px #ddd;
+            border-bottom: solid 1px #ddd;
+            display: flex;
+            height: 48px;
+
+            .day-header {
+                width: 110px;
+                border-right: solid 1px #ddd;
+                font-size: 14px;
+                font-weight: 500;
+                color: #696969;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+
+        .rows {
+            padding-bottom: 10px;
+
+            .row {
+                height: 137px;
+                display: flex;
+                border-bottom: solid 1px #ddd;
+
+                .day {
+                    width: 110px;
+                    border-right: solid 1px #ddd;
+                    background: #fafafa;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #EEEEEE;
+                    }
+
+                    &.today {
+                        background: #e3f2fd;
+
+                        &:hover {
+                            background: #bbdefb;
+                        }
+                    }
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    .day-number {
+                        padding: 5px;
+                        font-size: 13px;
+                        font-weight: 500;
+                        color: #37474f;
+                    }
+
+                    &.disabled {
+                       .day-number {
+                           color: #b8bdc0;
+                       }
+                    }
+                }
+
+            }
+        }
+    }
+}

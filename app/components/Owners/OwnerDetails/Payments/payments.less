@@ -1,0 +1,95 @@
+.owner-details-payments {
+    width: 854px;
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+    min-height: 856px;
+    margin: 10px;
+
+    .step-header {
+        padding: 0 40px 0 8px;
+        font-size: 20px;
+        font-weight: 500;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        color: #37474f;
+        border-bottom: 1px solid #dddddd;
+        position: relative;
+
+        .step-header-icon {
+            margin-right: 8px;
+            position: relative;
+            top: -2px;
+        }
+    }
+
+    .section {
+        padding: 20px 40px 40px 40px;
+        border-bottom: 1px solid #dddddd;
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #505050;
+            margin-bottom: 12px;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .payment-method {
+        width: 320px;
+    }
+
+    .routing {
+        width: 260px;
+    }
+
+    .wide {
+        width: 600px;
+    }
+
+    .payment-options {
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+        .ach {
+            font-size: 14px;
+            font-weight: 600;
+            color: #505050;
+        }
+
+        .option {
+            flex: 1;
+        }
+
+        .paypal-logo-wrapper {
+            position: relative;
+            width: 40px;
+
+            .paypal-logo {
+                position: absolute;
+                margin-top: -3px;
+            }
+        }
+    }
+
+    .payment-days-group {
+        display: flex;
+        align-items: flex-end;
+
+        .method {
+            min-width: 600px;
+            max-width: 600px;
+        }
+
+        .days {
+            min-width: 160px;
+            max-width: 160px;
+            margin-left: 10px;
+        }
+    }
+}

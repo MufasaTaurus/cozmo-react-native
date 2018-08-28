@@ -1,0 +1,13 @@
+const apiBase = process.env.NODE_ENV === 'production' ? 'https://api-cozmo.voyajoy.com/' : (process.env.NODE_ENV === 'staging' ? 'https://cozmo-api-staging.voyajoy.com/' : 'https://cozmo-api-dev.voyajoy.com/');
+export const API_BASE = apiBase;
+export const GOOGLE_CLIENT_ID = '107737378453-836e3fagh570tjnqmlat4hautnhsr5fl.apps.googleusercontent.com';
+export const CALENDAR_URL_BASE = apiBase + 'calendars/';
+export const LOCAL_STORAGE_USER_KEY = 'VJ_USER';
+export const LOCAL_STORAGE_NEW_PROPERTY_KEY = 'VJ_NEW_PROPERTY_INFO';
+export const LOCAL_STORAGE_RECENT_TICKETS = 'VJ_RECENT_TICKETS';
+export const REGEXP_EMAIL = new RegExp(/^[A-Z0-9._%'+-]+@(?:[A-Z0-9-]+\.)+[A-Z]{2,14}$/i);
+export const REGEXP_NAME = new RegExp(/^[A-Z]{1,30}$/i);
+export const REGEXP_PHONE = new RegExp(/^\+?[1-9]\d{4,14}$/i);
+export const REGEXP_PASSWORD = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$/);
+export const REGEXP_URL = new RegExp(/^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/);
+export const REGEXP_FORMAT_NUMBER = new RegExp(/(\d)(?=(\d{3})+(?!\d))/g);

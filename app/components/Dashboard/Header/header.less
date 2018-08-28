@@ -1,0 +1,30 @@
+@height: 60px;
+
+.dashboard-header {
+    width: 100%;
+    min-height: @height;
+    max-height: @height;
+    background: #fafafa;
+    text-align: left;
+    padding: 4px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    z-index: 5;
+
+    .left-side {
+        margin: 0 40px;
+    }
+
+    .right-side {
+        margin: 0 18px;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: 479px) {
+            margin: 0 8px;
+        }
+    }
+}

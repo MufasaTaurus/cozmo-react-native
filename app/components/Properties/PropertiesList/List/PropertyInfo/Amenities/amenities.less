@@ -1,0 +1,41 @@
+.amenities {
+
+    .text {
+        margin-top: -20px;
+    }
+
+    .info {
+        font-size: 12px;
+        color: #777777;
+        font-style: italic;
+    }
+
+    .amenities-list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1024px;
+
+        .amen {
+            display: flex;
+            color: #777777;
+            font-size: 14px;
+            align-items: center;
+            width: 33%;
+            margin-bottom: 25px;
+            cursor: pointer;
+            user-select: none;
+
+            .icon {
+                margin-right: 12px;
+            }
+
+            &:hover {
+                color: #363636;
+            }
+
+            &.active {
+                color: #64b5f6;
+            }
+        }
+    }
+}

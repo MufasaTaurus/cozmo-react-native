@@ -1,0 +1,94 @@
+.vendors-properties-details-cleaners {
+    display: flex;
+    margin: 10px;
+
+    .cleaners-list {
+        width: 754px;
+
+        .vj-card {
+            width: 100%;
+            min-height: 0;
+            margin: 0;
+            height: 100%;
+
+            .icon-wrapper {
+                position: relative;
+
+                .icon {
+                    position: absolute;
+                    left: -22px;
+                    top: 8px;
+                }
+            }
+
+            .vj-list-table thead {
+                border-top: none;
+            }
+
+            .arrows {
+                display: flex;
+
+                .arrow {
+                    background: #9e9e9e;
+                    color: #fff;
+                    border-radius: 50%;
+                    width: 15px;
+                    height: 15px;
+                    margin: 0 2px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #5c5c5c;
+                    }
+
+                    &.up {
+
+                        .icon {
+                            transform: rotate(90deg);
+                            position: relative;
+                            display: inline-block;
+                            left: 1px;
+                            top: -1px;
+                        }
+                    }
+
+                    &.down {
+                        .icon {
+                            transform: rotate(270deg);
+                            position: relative;
+                            display: inline-block;
+                            right: 1px;
+                            top: -1px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .legend {
+            padding: 10px 8px;
+
+            .icon {
+                margin-right: 5px;
+            }
+
+            .text {
+                font-size: 15px;
+                font-weight: 700;
+                color: #4a4a4a;
+            }
+        }
+
+        .cleaner-contact {
+            .email {
+                font-size: 14px;
+                font-weight: 300;
+            }
+
+            .phone {
+                font-size: 13px;
+                font-weight: 500;
+            }
+        }
+    }
+}

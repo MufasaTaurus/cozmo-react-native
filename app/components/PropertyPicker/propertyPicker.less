@@ -1,0 +1,49 @@
+.property-picker {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    position: relative;
+    background: #fff;
+    z-index: 3;
+    user-select: none;
+
+    .property-picker-selected-property {
+        padding: 6px;
+        cursor: pointer;
+
+        .arrow-down {
+            float: right;
+            margin-right: 4px;
+            color: #7d7d7d;
+            margin-top: -36px;
+            font-size: 20px;
+        }
+    }
+
+    .property-picker-dropdown {
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+        position: absolute;
+        width: 100%;
+        margin-top: 2px;
+        z-index: 2;
+        background: #fff;
+
+        .search-box-wrapper {
+            padding: 6px;
+        }
+
+        .property-picker-properties {
+            padding: 6px 0;
+            height: 104px;
+            overflow: auto;
+
+            &-property {
+                padding: 4px 6px;
+
+                &:hover {
+                    background: #EBEBEB;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.calendar-reservation {
+    position: relative;
+
+    .reservation-bar {
+        height: 27px;
+        border-radius: 0 17px 17px 0;
+        background-color: #cfd8dc;
+        font-size: 12px;
+        font-weight: 500;
+        color: #696969;
+        margin-left: 64px;
+        display: flex;
+        align-items: center;
+        width: 128px;
+        position: absolute;
+
+        &.continuing {
+            margin-left: 0;
+        }
+    }
+
+    .name {
+        margin-left: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}

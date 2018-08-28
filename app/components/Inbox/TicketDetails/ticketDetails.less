@@ -1,0 +1,106 @@
+@import (reference) '~utils/variables';
+
+.ticket-details {
+    max-width: 1500px;
+
+    .ticket-details-elements {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .requester {
+        background: #fff;
+        width: 335px;
+        margin: 0 20px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+
+        .header {
+            border-bottom: 1px solid #e5e5e5;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #37474f;
+            display: flex;
+            align-items: center;
+
+            .icon {
+                color: #00b0a3;
+                margin-right: 5px;
+            }
+        }
+
+        .content {
+            font-size: 14px;
+            font-weight: 500;
+            color: #9b9b9b;
+            display: flex;
+            padding: 25px 15px;
+
+            .image {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+
+            .name {
+                font-size: 16px;
+                font-weight: 600;
+                color: #4a4a4a;
+            }
+
+            .guest {
+                font-size: 13px;
+                font-weight: 500;
+                font-style: italic;
+                color: #ababab
+            }
+        }
+    }
+
+    .ticket-details-ticket-info {
+        background: #fff;
+        flex: 1;
+    }
+
+    .ticket-info {
+        padding: 25px;
+
+        .title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #4a4a4a;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            .title-icon {
+                margin-right: 5px;
+                position: relative;
+                top: -2px;
+            }
+
+            .status-select {
+                min-width: 120px;
+
+                .select-group {
+                    margin: 0;
+                }
+            }
+        }
+
+        .ticket-options {
+            display: flex;
+            align-items: center;
+            width: 800px;
+            justify-content: space-between;
+
+            > div {
+                min-width: 180px;
+            }
+        }
+    }
+
+    .ticket-details-tabs {}
+}

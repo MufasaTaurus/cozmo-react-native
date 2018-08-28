@@ -1,0 +1,82 @@
+.tags-with-autocomplete-group {
+    width: 100%;
+
+    .tags-with-autocomplete-label {
+        color: #9b9b9b;
+        font-size: 12px;
+    }
+
+    .tags-and-input {
+        width: 100%;
+        padding: 0 6px 6px;
+        box-sizing: border-box;
+        background: #fff;
+        color: #696969;
+        outline: none;
+        border: 1px solid #c4c4c4;
+        font-size: 14px;
+        display: flex;
+        flex-flow: wrap;
+        min-height: 38px;
+        border-radius: 2px;
+
+        .tag {
+            border: 1px solid #9b9b9b;
+            background: #EEEEEE;
+            color: #4a4a4a;
+            padding: 0 6px;
+            border-radius: 2px;
+            font-size: 14px;
+            white-space: nowrap;
+            height: 23px;
+            margin: 6px 6px 0 0 ;
+
+            .delete {
+                margin-left: 4px;
+                position: relative;
+                width: 12px;
+                display: inline-block;
+                height: 14px;
+
+                .icon {
+                    position: absolute;
+                    font-size: 18px;
+                    margin-top: -4px;
+                }
+            }
+        }
+
+        .tags-field {
+            outline: none;
+            min-width: 50px;
+            max-width: 100%;
+            flex: 1;
+            justify-self: stretch;
+            margin-top: 6px;
+        }
+    }
+
+    &.small {
+        .tags-and-input {
+            font-size: 12px;
+            padding: 5px 2px;
+            height: 30px;
+
+            .tag {
+                font-size: 12px;
+                padding: 0 4px;
+
+                .delete {
+                    width: 10px;
+                    height: 12px;
+
+                    .icon {
+                        position: absolute;
+                        font-size: 14px;
+                        margin-top: -2px;
+                    }
+                }
+            }
+        }
+    }
+}

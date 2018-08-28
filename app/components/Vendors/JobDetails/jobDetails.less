@@ -1,0 +1,280 @@
+.vendors-job-details {
+    height: 100%;
+
+    .sections {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .vendors-job-details {
+            height: 100%;
+        }
+
+        .footer {
+            min-height: 80px;
+            max-height: 80px;
+            background: #fff;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+
+            .back-button {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .content {
+        padding: 10px;
+        overflow: auto;
+        flex: 1;
+
+        .section-header {
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 500;
+            color: #37474f;
+            border-bottom: 1px solid #dddddd;
+
+            .section-header-icon {
+                margin-right: 5px;
+                position: relative;
+                top: -2px;
+
+                &.edit {
+                    float: right;
+                    margin-right: 0;
+                    color: #696969;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        .combined-sections {
+            display: flex;
+            align-items: flex-start;
+
+            .job-details {
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+                background: #fff;
+                width: 786px;
+
+                .job-info {
+                    .section {
+                        border-bottom: 1px solid #dddddd;
+                        padding: 24px 40px 36px 40px;
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+
+                        .section-title {
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: #505050;
+                            margin-bottom: 17px;
+                        }
+
+                        .property {
+                            display: flex;
+                            width: 333px;
+                            height: 56px;
+                            border: solid 1px #dddddd;
+                            margin-bottom: 10px;
+
+                            .image {
+                                min-width: 55px;
+                                max-width: 55px;
+                                height: 100%;
+                                background-position: center;
+                                background-size: cover;
+                            }
+
+                            .text {
+                                padding: 0 12px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                flex: 1;
+
+                                .name {
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    color: #232323;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    max-width: 250px;
+                                }
+
+                                .address {
+                                    font-size: 14px;
+                                    font-weight: 300;
+                                    color: #5c5c5c;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    max-width: 250px;
+                                }
+                            }
+                        }
+
+                        .notifications-wrapper {
+                            background: #fafafa;
+                            padding: 14px 18px;
+
+                            .status {
+                                text-transform: uppercase;
+                                font-size: 12px;
+                                font-weight: 500;
+                                color: #696969;
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 13px;
+
+                                .job-status {
+                                    margin-right: 5px;
+                                }
+                            }
+
+                            .notifications {
+                                .notification {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    height: 55px;
+                                    background: #ffffff;
+                                    padding: 0 12px;
+                                    margin-bottom: 5px;
+                                    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+
+                                    .notification-content {
+                                        font-size: 13px;
+                                        font-weight: 300;
+                                        color: #4a4a4a;
+                                    }
+
+                                    .notification-date {
+                                        font-size: 12px;
+                                        color: #9b9b9b;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .side-by-side {
+                        display: flex;
+                    }
+
+                    .small {
+                        width: 180px;
+                    }
+
+                    .narrow {
+                        width: 260px;
+                    }
+
+                    .space {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .cleaner-info {
+                width: 335px;
+                margin-left: 10px;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+                background: #fff;
+
+                .header {
+                    border-bottom: 1px solid #e5e5e5;
+                    padding: 15px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #37474f;
+                    display: flex;
+                    align-items: center;
+
+                    .icon {
+                        color: #00b0a3;
+                        margin-right: 5px;
+                    }
+                }
+
+                .cleaner-content {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #9b9b9b;
+                    padding: 20px;
+
+                    .cleaner-content-info {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        .image {
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            margin-right: 15px;
+                        }
+
+                        .info {
+                            .name {
+                                font-size: 16px;
+                                font-weight: 600;
+                                color: #4a4a4a;
+                            }
+                        }
+                    }
+
+                    .button-new {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .no-cleaner-info {
+                width: 335px;
+                height: 235px;
+                padding: 20px;
+                margin-left: 10px;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+                background: #ffebee;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                .no-cleaner-content {
+                    text-align: center;
+                    color: #505050;
+
+                    .no-cleaner-title {
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        font-weight: 600;
+                        letter-spacing: 2px;
+                        margin-bottom: 5px;
+                    }
+
+                    .no-cleaner-text {
+                        font-size: 13px;
+                        margin-bottom: 45px;
+                    }
+                }
+
+                .button-new {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

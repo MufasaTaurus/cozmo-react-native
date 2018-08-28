@@ -1,0 +1,349 @@
+.things-to-do {
+    padding-bottom: 75px;
+
+    .disabler {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.7);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .pois {
+        background: #fafafa;
+        position: relative;
+
+        .pois-empty-state {
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+
+            .title {
+                font-size: 18px;
+                letter-spacing: 2.8px;
+                color: #505050;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-top: 15px;
+            }
+
+            .subtitle {
+                font-size: 13px;
+                color: #a7a7a7;
+            }
+
+            .separator {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                width: 500px;
+                margin: 30px auto;
+
+                .text {
+                    margin: 0 30px;
+                    color: #9b9b9b;
+                    letter-spacing: 0.9px;
+                    text-transform: uppercase;
+                }
+
+                .line {
+                    border-top: 1px solid #cfd8dc;
+                    position: relative;
+                    top: 10px;
+                    flex: 1;
+                }
+            }
+
+            .option-buttons {
+                .button-new {
+                    margin: 5px;
+                    color: #00b0a3;
+                    border-color: #00b0a3;
+                    background: transparent;
+
+                    &:hover {
+                        filter: brightness(120%);
+                    }
+
+                    &.disabled {
+                        color: #ccc;
+                        border-color: #ccc;
+
+                        &:hover {
+                            filter: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .map-with-list {
+        position: relative;
+        display: flex;
+        width: 100%;
+
+        .start-over-button {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: -20px;
+            right: 10px;
+            font-size: 11px;
+            font-weight: 500;
+            color: #4a4a4a;
+            cursor: pointer;
+
+            .icon {
+                color: #5cc7bd;
+                margin-bottom: 3px;
+            }
+        }
+
+        .map-wrapper {
+            min-width: 460px;
+            height: 500px;
+
+            .map {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .pois-list {
+            min-width: 300px;
+            width: 50%;
+            border: 1px solid #e5e5e5;
+            padding: 8px;
+            margin: 0 8px;
+            height: 500px;
+            overflow: auto;
+
+            .poi {
+                min-width: 284px;
+                width: 100%;
+                margin-bottom: 5px;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+
+                .content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    min-width: 284px;
+                    width: 100%;
+                    height: 74px;
+
+                    .content-info {
+                        display: flex;
+                        align-items: center;
+                        width: calc(~"100% - 30px");
+
+                        .image {
+                            min-width: 74px;
+                            max-width: 74px;
+                            height: 74px;
+                            margin-right: 10px;
+                            background-size: cover;
+                            background-position: center;
+
+                            .poi-icon {
+                                color: #fff;
+                                margin: 4px;
+                                filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+                            }
+                        }
+
+                        .content-info-data {
+                            max-width: calc(~"100% - 84px");
+
+                            .name {
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: #232323;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                            }
+
+                            .address {
+                                font-size: 13px;
+                                color: #5c5c5c;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                            }
+
+                            .description {
+                                display: flex;
+                                align-items: baseline;
+
+                                .desc-preview {
+                                    position: relative;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    font-size: 12px;
+                                    font-style: oblique;
+                                    color: #9b9b9b;
+                                }
+
+                                .edit-button {
+                                    font-size: 11px;
+                                    text-align: right;
+                                    margin-left: 5px;
+                                    color: #65B5F4;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        color: #5D5D5D;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .remove {
+                        color: #90a4ae;
+                        margin-left: 5px;
+                        cursor: pointer;
+                        margin-right: 10px;
+
+                        &:hover {
+                            color: #000;
+                        }
+                    }
+                }
+
+                .description-modal {
+                    .poi-info {
+                        padding: 17px 40px;
+                        border-bottom: 1px solid #dddddd;
+                        display: flex;
+                        align-items: center;
+
+                        .image {
+                            width: 74px;
+                            height: 74px;
+                            margin-right: 10px;
+                            background-size: cover;
+                            background-position: center;
+                        }
+
+                        .name {
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #232323;
+                            width: 600px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+
+                        .address {
+                            font-size: 13px;
+                            color: #5c5c5c;
+                            width: 600px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+
+                        .category {
+                            font-size: 12px;
+                            color: #9b9b9b;
+                            width: 600px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    }
+
+                    .text-field-wrapper {
+                        padding: 17px 40px 129px 40px;
+
+                        .text-field {
+                            height: 266px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .places-wrapper {
+        position: relative;
+
+        .places-input {
+            position: absolute;
+            width: 446px;
+            top: 10px;
+            z-index: 2;
+            left: 6px;
+        }
+    }
+
+    .pin-popup {
+        background: #fff;
+        font-size: 12px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+        display: flex;
+        height: 80px;
+        width: 220px;
+        overflow: hidden;
+        z-index: 5;
+
+        .image {
+            width: 80px;
+            height: 100%;
+            min-height: 80px;
+            background-color: #ebebeb;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .add-poi, .remove-poi {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            min-width: 45px;
+            background: #61C7BD;
+            padding: 6px 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            color: #fff;
+            letter-spacing: 0.05em;
+            text-align: center;
+            user-select: none;
+            outline: none;
+
+            &:hover {
+                filter: brightness(1.1);
+                color: black;
+            }
+        }
+
+        .remove-poi {
+            background: #B0BEC5;
+        }
+
+        .info {
+            padding: 10px;
+            position: relative;
+
+            .name {
+                font-weight: 500;
+                margin-bottom: 4px;
+            }
+
+            .address {
+                color: #7d7d7d;
+                font-size: 10px;
+            }
+        }
+    }
+}

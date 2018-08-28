@@ -1,0 +1,83 @@
+@font-face{
+    font-family:"Avenir";
+    font-style: normal;
+    font-weight: 300;
+    src: url("//monet.voyajoy.com/fonts/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix");
+    src:
+        local('Avenir Light'),
+        url("//monet.voyajoy.com/fonts/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix") format("eot"),
+        url("//monet.voyajoy.com/fonts/0078f486-8e52-42c0-ad81-3c8d3d43f48e.woff2") format("woff2"),
+        url("//monet.voyajoy.com/fonts/908c4810-64db-4b46-bb8e-823eb41f68c0.woff") format("woff"),
+        url("//monet.voyajoy.com/fonts/4577388c-510f-4366-addb-8b663bcc762a.ttf") format("truetype"),
+        url("//monet.voyajoy.com/fonts/b0268c31-e450-4159-bfea-e0d20e2b5c0c.svg#b0268c31-e450-4159-bfea-e0d20e2b5c0c") format("svg");
+}
+
+@font-face{
+    font-family:"Avenir";
+    font-style: normal;
+    font-weight: 400;
+    src: url("//monet.voyajoy.com/fonts/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix");
+    src:
+        local('Avenir Book'),
+        url("//monet.voyajoy.com/fonts/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix") format("eot"),
+        url("//monet.voyajoy.com/fonts/065a6b14-b2cc-446e-9428-271c570df0d9.woff2") format("woff2"),
+        url("//monet.voyajoy.com/fonts/65d75eb0-2601-4da5-a9a4-9ee67a470a59.woff") format("woff"),
+        url("//monet.voyajoy.com/fonts/c70e90bc-3c94-41dc-bf14-caa727c76301.ttf") format("truetype"),
+        url("//monet.voyajoy.com/fonts/0979215b-3a1b-4356-9c76-e90fa4551f1d.svg#0979215b-3a1b-4356-9c76-e90fa4551f1d") format("svg");
+}
+
+@font-face{
+    font-family:"Avenir";
+    font-style: normal;
+    font-weight: 500;
+    src: url("//monet.voyajoy.com/fonts/57bf7902-79ee-4b31-a327-1bbf59a3d155.eot?#iefix");
+    src:
+        local('Avenir Roman'),
+        url("//monet.voyajoy.com/fonts/57bf7902-79ee-4b31-a327-1bbf59a3d155.eot?#iefix") format("eot"),
+        url("//monet.voyajoy.com/fonts/b290e775-e0f9-4980-914b-a4c32a5e3e36.woff2") format("woff2"),
+        url("//monet.voyajoy.com/fonts/4b978f72-bb48-46c3-909a-2a8cd2f8819c.woff") format("woff"),
+        url("//monet.voyajoy.com/fonts/9bdf0737-f98c-477a-9365-ffc41b9d1285.ttf") format("truetype"),
+        url("//monet.voyajoy.com/fonts/15281d0d-e3c2-46e1-94db-cb681e00bfaa.svg#15281d0d-e3c2-46e1-94db-cb681e00bfaa") format("svg");
+}
+
+@font-face{
+    font-family:"Avenir";
+    font-style: normal;
+    font-weight: 600;
+    src: url("//monet.voyajoy.com/fonts/e0542193-b2e6-4273-bc45-39d4dfd3c15b.eot?#iefix");
+    src:
+        local('Avenir Medium'),
+        url("//monet.voyajoy.com/fonts/e0542193-b2e6-4273-bc45-39d4dfd3c15b.eot?#iefix") format("eot"),
+        url("//monet.voyajoy.com/fonts/17b90ef5-b63f-457b-a981-503bb7afe3c0.woff2") format("woff2"),
+        url("//monet.voyajoy.com/fonts/c9aeeabd-dd65-491d-b4be-3e0db9ae47a0.woff") format("woff"),
+        url("//monet.voyajoy.com/fonts/25f994de-d13f-4a5d-a82b-bf925a1e054d.ttf") format("truetype"),
+        url("//monet.voyajoy.com/fonts/3604edbd-784e-4ca7-b978-18836469c62d.svg#3604edbd-784e-4ca7-b978-18836469c62d") format("svg");
+}
+
+@font-face{
+    font-family:"Avenir";
+    font-style: normal;
+    font-weight: 700;
+    src: url("//monet.voyajoy.com/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix");
+    src:
+        local('Avenir Heavy'),
+        url("//monet.voyajoy.com/fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix") format("eot"),
+        url("//monet.voyajoy.com/fonts/d513e15e-8f35-4129-ad05-481815e52625.woff2") format("woff2"),
+        url("//monet.voyajoy.com/fonts/61bd362e-7162-46bd-b67e-28f366c4afbe.woff") format("woff"),
+        url("//monet.voyajoy.com/fonts/ccd17c6b-e7ed-4b73-b0d2-76712a4ef46b.ttf") format("truetype"),
+        url("//monet.voyajoy.com/fonts/20577853-40a7-4ada-a3fb-dd6e9392f401.svg#20577853-40a7-4ada-a3fb-dd6e9392f401") format("svg");
+}
+
+@font-face{
+    font-family:"Avenir";
+    font-style: normal;
+    font-weight: 800;
+    src: url("//monet.voyajoy.com/fonts/f55e4498-ad48-4577-93a0-c614de5cbbb8.eot?#iefix");
+    src:
+        local('Avenir Black'),
+        url("//monet.voyajoy.com/fonts/f55e4498-ad48-4577-93a0-c614de5cbbb8.eot?#iefix") format("eot"),
+        url("//monet.voyajoy.com/fonts/c78eb7af-a1c8-4892-974b-52379646fef4.woff2") format("woff2"),
+        url("//monet.voyajoy.com/fonts/75b36c58-2a02-4057-a537-09af0832ae46.woff") format("woff"),
+        url("//monet.voyajoy.com/fonts/b5c44a82-eeb8-41de-9c3f-a8db50b24b8a.ttf") format("truetype"),
+        url("//monet.voyajoy.com/fonts/93603a74-2be0-436c-83e1-68f9ef616eaf.svg#93603a74-2be0-436c-83e1-68f9ef616eaf") format("svg");
+}

@@ -1,0 +1,61 @@
+.property-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .property-info {
+        text-align: left;
+        display: flex;
+        height: 100%;
+
+        .step {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+            min-width: 855px;
+            max-width: 1525px;
+            min-height: 849px;
+            background: #fff;
+            padding-bottom: 75px;
+            margin: 10px 20px 10px 10px;
+        }
+
+        .side-bar {
+            z-index: 2;
+
+            .image {
+                position: relative;
+
+                .overlay {
+                    background: rgba(0,0,0,0.4);
+                    color: white;
+                    font-size: 14px;
+                    position: absolute;
+                    width: 100%;
+                    padding: 0 4px;
+                    height: 26px;
+                    margin-top: -26px;
+                    line-height: 26px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        .info {
+            overflow: auto;
+            width: 100%;
+            color: #4f4f4f;
+            height: 100%;
+
+            .content-wrapper {
+                height: 100%;
+                overflow: auto;
+
+                h1 {
+                    margin-top: 0;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

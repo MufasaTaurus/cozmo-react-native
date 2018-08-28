@@ -1,0 +1,23 @@
+.custom-progress-bar {
+    border: 3px white solid;
+    border-radius: 15px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+
+    .custom-progress {
+        border-radius: inherit;
+        height: 20px;
+        transition: width 500ms;
+    }
+    .low {
+        background: linear-gradient(to right, #FBC9CA, #FCD8B1);
+    }
+    .mid {
+        background: linear-gradient(to right, #FCD8B1, #FEF186);
+    }
+    .high {
+        background: linear-gradient(to right, #FEEEC9, #DAF982);
+    }
+    .max {
+        background: linear-gradient(to right, #CCF6A7, #79DFD5);
+    }
+}

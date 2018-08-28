@@ -1,0 +1,83 @@
+.vj-pagination {
+    display: inline-block;
+
+    .vj-pagination-content {
+        display: flex;
+        align-items: center;
+        color: #9b9b9b;
+
+        .page {
+            font-size: 13px;
+            font-weight: 500;
+            margin-right: 5px;
+            padding: 5px 9px;
+            cursor: pointer;
+            border-radius: 2px;
+            border: 1px solid #9b9b9b;
+            user-select: none;
+
+            &:hover {
+                border-color: #616161;
+            }
+
+            &.active {
+                color: #616161;
+                background: #f4f4f4;
+            }
+
+            &.separator {
+                border: none;
+                font-size: 6px;
+                padding: 0;
+                cursor: default;
+            }
+        }
+
+        .arrow {
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 2px;
+            border: 1px solid #9b9b9b;
+            padding: 2px 7px;
+            color: #616161;
+            user-select: none;
+
+            &:hover {
+                color: #c4c4c4;
+                background: #f4f4f4;
+            }
+
+            &.next {
+                transform: rotate(180deg);
+            }
+
+            &.prev {
+                margin: 0 5px 0 7px;
+            }
+        }
+
+        .summary {
+            color: #616161;
+            font-size: 13px;
+            margin-right: 15px;
+
+            .value {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .vj-pagination {
+
+        .vj-pagination-content {
+            position: relative;
+
+            .summary {
+                position: absolute;
+                top: -28px;
+            }
+        }
+    }
+}

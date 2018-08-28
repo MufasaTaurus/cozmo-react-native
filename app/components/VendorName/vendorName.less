@@ -1,0 +1,46 @@
+.vendor-name {
+    display: flex;
+    align-items: center;
+
+    .image, .badge {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+    }
+
+    .badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .vendor-info {
+        display: flex;
+        flex-direction: column;
+
+        .full-name {
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: -2px;
+            color: #000;
+        }
+
+        .email {
+            color: #7d7d7d;
+            font-size: 12px;
+        }
+    }
+
+    &.reversed {
+        text-align: right;
+        flex-direction: row-reverse;
+
+        .image, .badge {
+            margin-left: 8px;
+        }
+    }
+}

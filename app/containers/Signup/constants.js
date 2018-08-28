@@ -1,0 +1,14 @@
+export const SIGNUP_FORM_SUBMIT = 'cozmo/Signup/SIGNUP_FORM_SUBMIT';
+export const SIGNUP = 'cozmo/Signup/SIGNUP';
+export const SIGNUP_SUCCESS = 'cozmo/Signup/SIGNUP_SUCCESS';
+export const SIGNUP_ERROR = 'cozmo/Signup/SIGNUP_ERROR';
+export const SIGNUP_WITH_GOOGLE = 'cozmo/Signup/SIGNUP_WITH_GOOGLE';
+export const SIGNUP_WITH_GOOGLE_SUCCESS = 'cozmo/Signup/SIGNUP_WITH_GOOGLE_SUCCESS';
+export const SIGNUP_WITH_GOOGLE_ERROR = 'cozmo/Signup/SIGNUP_WITH_GOOGLE_ERROR';
+export const SIGNUP_VERIFY_EMAIL = 'cozmo/Signup/VERIFY_EMAIL';
+export const SIGNUP_VERIFY_EMAIL_SUCCESS = 'cozmo/Signup/VERIFY_EMAIL_SUCCESS';
+export const SIGNUP_VERIFY_EMAIL_ERROR = 'cozmo/Signup/VERIFY_EMAIL_ERROR';
+
+export const FORGOT_PASSWORD_EMAIL_CHANGE = 'cozmo/Signup/FORGOT_PASSWORD_EMAIL_CHANGE';
+export const FORGOT_PASSWORD_EMAIL_SENT = 'cozmo/Signup/FORGOT_PASSWORD_EMAIL_SENT';
+export const FORGOT_PASSWORD_SEND_EMAIL = 'cozmo/Signup/FORGOT_PASSWORD_SEND_EMAIL';

@@ -1,0 +1,148 @@
+.date-picker-group {
+    .date-picker-label {
+        color: #9b9b9b;
+        font-size: 12px;
+    }
+
+    .date-picker {
+        width: 100%;
+        border: solid 1px #9b9b9b;
+        border-radius: 2px;
+        position: relative;
+        background: #fff;
+        z-index: 3;
+        user-select: none;
+        height: 38px;
+
+        .date-picker-selected-date {
+            cursor: pointer;
+            padding: 0 15px;
+            color: #9e9e9e;
+            font-size: 14px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .value {
+                overflow: hidden;
+                font-size: 14px;
+                color: #212121;
+            }
+
+            .arrow-down {
+                color: #616161;
+                font-size: 20px;
+                margin-top: 3px;
+            }
+        }
+
+        .date-picker-dropdown {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+            position: absolute;
+            width: 100%;
+            margin-top: 2px;
+            background: #fff;
+            max-height: 300px;
+            overflow: auto;
+            border-radius: 2px;
+            margin-bottom: 5px;
+            font-size: 14px;
+
+            .calendar {
+                user-select: none;
+                width: 100%;
+                margin: 12px auto;
+                font-size: 14px;
+
+                .header {
+                    display: flex;
+                    justify-content: center;
+                    margin: 10px 0;
+                    align-items: center;
+
+                    .month {
+                        margin: 0 14px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        text-align: center;
+                        width: 140px;
+                    }
+
+                    .arrow {
+                        font-size: 20px;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: #9C9C9C;
+                        }
+
+                        &.next {
+                            transform: rotate(90deg);
+                        }
+
+                        &.prev {
+                            transform: rotate(270deg);
+                        }
+                    }
+                }
+
+                .body {
+                    .days-names, .week {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 12px;
+                        text-align: center;
+
+                        .day {
+                            text-align: center;
+                            width: 50px;
+                            margin-bottom: 2px;
+                            border-radius: 100%;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            .day-number {
+                                border-radius: 50%;
+                                width: 25px;
+                                height: 25px;
+                                line-height: 25px;
+                            }
+
+                            &:hover {
+                                .day-number {
+                                    background: #EBEBEB;
+                                }
+                            }
+
+                            &.disabled {
+                                color: #9C9C9C;
+                            }
+
+                            &.today {
+                                .day-number {
+                                    color: #5cc7bd;
+                                }
+                            }
+
+                            &.selected {
+                                .day-number {
+                                    background: #5cc7bd;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+
+                    .days-names {
+                        color: #9C9C9C;
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

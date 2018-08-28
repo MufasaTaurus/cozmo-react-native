@@ -1,0 +1,77 @@
+.inbox-guest-reservations {
+    padding: 20px;
+
+    .reservations-table {
+        width: 100%;
+        background: #fff;
+
+        &-header {
+            .headers td {
+                color: #9e9e9e;
+                font-size: 12px;
+                font-weight: 600;
+                padding: 12px 0;
+                border-bottom: 1px solid #E9E9E9;
+            }
+        }
+
+        &-body {
+            .reservation {
+
+                &:nth-child(2n + 1) {
+                    background: #F2FBFA;
+                }
+
+                td {
+                    padding: 8px 0;
+                    border-bottom: 1px solid #E9E9E9;
+
+                    &.prop {
+                        .prop-info {
+                            display: flex;
+                            align-items: center;
+                            margin-left: 5px;
+
+                            .image {
+                                margin-right: 10px;
+                                width: 65px;
+                                height: 40px;
+                            }
+
+                            .prop-name {
+                                font-weight: 500;
+                                font-size: 14px;
+                                color: #212526;
+                            }
+
+                            .prop-address {
+                                font-size: 13px;
+                                color: #5D5D5D;
+                            }
+                        }
+                    }
+
+                    &.status {
+                        width: 100px;
+
+                        .labels {
+                            display: flex;
+                            flex-direction: column;
+
+                            .status-label {
+                                margin: 2px 0;
+                            }
+                        }
+                    }
+
+                    &.dates {
+                        width: 130px;
+                        font-size: 12px;
+                        color: #78797B;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

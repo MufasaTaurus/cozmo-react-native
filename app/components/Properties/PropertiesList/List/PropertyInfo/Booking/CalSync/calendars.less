@@ -1,0 +1,156 @@
+.availability-calendars {
+
+    .content-section {
+        padding: 20px 40px;
+    }
+
+    .clipboard-button {
+        outline: none;
+        padding: 0;
+    }
+
+    .disabler {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.75);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .calendars-table {
+        position: relative;
+
+        .add-button-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .section-title {
+                font-size: 18px;
+                font-weight: 500;
+                color: #505050;
+            }
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid #e5e5e5;
+
+            thead {
+
+                td {
+                    font-size: 12px;
+                    color: #9e9e9e;
+                    font-weight: 600;
+                    padding: 12px 0;
+                    border-bottom: 1px solid #E9E9E9;
+
+                    &.date {
+                        width: 100px;
+                    }
+
+                    &.events {
+                        width: 60px;
+                    }
+
+                    &.status {
+                        width: 100px;
+                    }
+
+                    &.action {
+                        width: 80px;
+                    }
+
+                    &:last-of-type {
+                        width: 10px;
+                    }
+
+                    &:first-child {
+                        padding-left: 15px;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    border-bottom: 1px solid #E9E9E9;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    &:hover {
+                        background: #EBEBEB;
+                    }
+
+                    td {
+                        font-size: 12px;
+                        color: #7d7d7d;
+                        padding: 6px 2px;
+                        height: 60px;
+
+                        &.events {
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+
+                        &.name {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            max-width: 140px;
+                            color: #000;
+                            font-weight: 500;
+                            font-size: 14px;
+
+                            .dot {
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 100%;
+                                margin-right: 10px;
+                                display: inline-block;
+                                position: relative;
+                                top: 3px;
+                            }
+                        }
+
+                        &.status {
+                            .label {
+                                font-size: 10px;
+                                font-weight: 600;
+                                border: 1px solid;
+                                width: 68px;
+                                height: 18px;
+                                border-radius: 8px;
+                                text-transform: uppercase;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                &.active {
+                                    color: #64b5f6;
+                                    background: #d4ecff;
+                                    border-color: #64b5f6;
+                                }
+
+                                &.disable {
+                                    color: #7f8c8d;
+                                    background: #e0e0e0;
+                                    border-color: #7f8c8d;
+                                }
+                            }
+                        }
+
+                        &:first-child {
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

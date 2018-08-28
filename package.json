@@ -1,0 +1,211 @@
+{
+  "name": "Cozmo",
+  "version": "1.0.0",
+  "description": "Voyajoy dashboard web app.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/voyajoy/cozmo-web.git"
+  },
+  "engines": {
+    "npm": ">=3",
+    "node": ">=5"
+  },
+  "author": "Voyajoy",
+  "license": "MIT",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p",
+    "build:staging": "cross-env NODE_ENV=staging webpack --config internals/webpack/webpack.prod.babel.js --color -p",
+    "build:dev": "cross-env NODE_ENV=dev webpack --config internals/webpack/webpack.prod.babel.js --color -p",
+    "build:clean": "npm run test:clean && rimraf ./build",
+    "build:dll": "node ./internals/scripts/dependencies.js",
+    "start": "cross-env NODE_ENV=development node server --port 3000",
+    "start:production": "npm run test && npm run build && npm run start:prod",
+    "start:prod": "cross-env NODE_ENV=production node server",
+    "presetup": "npm i chalk shelljs",
+    "postsetup": "npm run build:dll",
+    "lint": "npm run lint:js",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint:staged": "lint-staged",
+    "test": "cross-env NODE_ENV=test jest"
+  },
+  "lint-staged": {
+    "*.js": "lint:eslint"
+  },
+  "babel": {
+    "presets": [
+      [
+        "latest",
+        {
+          "es2015": {
+            "modules": false
+          }
+        }
+      ],
+      "react",
+      "stage-0"
+    ],
+    "env": {
+      "production": {
+        "only": [
+          "app"
+        ],
+        "plugins": [
+          "transform-react-remove-prop-types",
+          "transform-react-constant-elements",
+          "transform-react-inline-elements"
+        ]
+      },
+      "test": {
+        "plugins": [
+          "transform-es2015-modules-commonjs",
+          "dynamic-import-node"
+        ]
+      }
+    }
+  },
+  "dllPlugin": {
+    "path": "node_modules/react-boilerplate-dlls",
+    "exclude": [
+      "chalk",
+      "compression",
+      "cross-env",
+      "express",
+      "ip",
+      "minimist",
+      "sanitize.css"
+    ],
+    "include": [
+      "core-js",
+      "lodash",
+      "eventsource-polyfill"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "app/**/*.{js,jsx}",
+      "!app/**/*.test.{js,jsx}",
+      "!app/app.js",
+      "!app/routes.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 98,
+        "branches": 91,
+        "functions": 98,
+        "lines": 98
+      }
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "app"
+    ],
+    "moduleNameMapper": {
+      ".*\\.(css|less|styl|scss|sass)$": "<rootDir>/internals/mocks/cssModule.js",
+      ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/image.js"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js",
+    "testRegex": "test/.*\\.test\\.js$"
+  },
+  "dependencies": {
+    "axios": "0.16.2",
+    "babel-polyfill": "6.20.0",
+    "chalk": "1.1.3",
+    "compression": "1.6.2",
+    "cross-env": "3.1.3",
+    "cssnano": "3.10.0",
+    "draft-js": "0.10.1",
+    "draft-js-export-html": "0.6.0",
+    "draft-js-import-html": "1.0.2",
+    "express": "4.14.0",
+    "fontfaceobserver": "2.0.7",
+    "immutable": "3.8.1",
+    "invariant": "2.2.2",
+    "ip": "1.1.4",
+    "lodash": "4.17.2",
+    "material-ui": "0.18.6",
+    "minimist": "1.2.0",
+    "moment": "2.18.1",
+    "postcss-loader": "2.0.6",
+    "rc-slider": "^8.1.3",
+    "react": "15.4.1",
+    "react-clipboard.js": "1.1.2",
+    "react-dnd": "2.4.0",
+    "react-dnd-html5-backend": "2.4.1",
+    "react-dom": "15.4.1",
+    "react-google-login": "2.9.2",
+    "react-google-maps": "9.2.2",
+    "react-helmet": "3.2.2",
+    "react-onclickoutside": "6.6.2",
+    "react-redux": "4.4.6",
+    "react-router": "3.0.0",
+    "react-router-redux": "4.0.8",
+    "react-router-scroll": "0.4.1",
+    "react-tap-event-plugin": "^2.0.0",
+    "react-tiny-virtual-list": "^2.1.4",
+    "react-virtualized": "^9.18.5",
+    "recharts": "1.0.0-alpha.6",
+    "recompose": "0.26.0",
+    "redux": "3.6.0",
+    "redux-immutable": "3.0.8",
+    "redux-saga": "0.14.0",
+    "reselect": "2.5.4",
+    "sanitize.css": "4.1.0",
+    "styled-components": "1.1.2",
+    "warning": "3.0.0",
+    "whatwg-fetch": "2.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-core": "6.21.0",
+    "babel-eslint": "7.1.1",
+    "babel-loader": "6.2.10",
+    "babel-plugin-dynamic-import-node": "1.0.0",
+    "babel-plugin-react-transform": "2.0.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.18.0",
+    "babel-plugin-transform-react-constant-elements": "6.9.1",
+    "babel-plugin-transform-react-inline-elements": "6.8.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.2.11",
+    "babel-preset-latest": "6.16.0",
+    "babel-preset-react": "6.16.0",
+    "babel-preset-react-hmre": "1.1.1",
+    "babel-preset-stage-0": "6.16.0",
+    "chai": "^4.0.2",
+    "cheerio": "0.22.0",
+    "circular-dependency-plugin": "2.0.0",
+    "css-loader": "0.26.1",
+    "enzyme": "^2.8.2",
+    "eslint": "3.11.1",
+    "eslint-config-airbnb": "13.0.0",
+    "eslint-config-airbnb-base": "10.0.1",
+    "eslint-import-resolver-webpack": "0.8.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "6.7.1",
+    "eslint-plugin-redux-saga": "0.1.5",
+    "eventsource-polyfill": "0.9.6",
+    "exports-loader": "0.6.3",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "0.9.0",
+    "html-loader": "0.4.4",
+    "html-webpack-plugin": "2.24.1",
+    "imports-loader": "0.6.5",
+    "jest-cli": "18.0.0",
+    "jsdom": "^10.1.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.4",
+    "less-plugin-autoprefix": "^1.5.1",
+    "lint-staged": "3.2.1",
+    "null-loader": "0.1.1",
+    "offline-plugin": "4.5.2",
+    "react-addons-test-utils": "15.4.1",
+    "rimraf": "2.5.4",
+    "shelljs": "0.7.5",
+    "sinon": "2.0.0-pre",
+    "style-loader": "0.13.1",
+    "url-loader": "0.5.7",
+    "webpack": "2.2.0",
+    "webpack-dev-middleware": "1.9.0",
+    "webpack-hot-middleware": "2.15.0"
+  }
+}

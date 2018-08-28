@@ -1,0 +1,96 @@
+.reservation-info {
+    .content {
+        padding: 10px;
+
+        .guest-details-card {
+            display: flex;
+            align-items: center;
+
+            .avatar {
+                margin-right: 12px;
+
+                > img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+            }
+
+            .info {
+                .name {
+                    font-weight: 500;
+                }
+
+                .email, .phone {
+                    color: #8A8A8A;
+                    font-size: 12px;
+                    margin: -4px 0;
+                }
+            }
+        }
+
+        .reservation-details-card {
+
+            .basic-details {
+                display: flex;
+                align-items: center;
+
+                .avatar {
+                    margin-right: 12px;
+
+                    > img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .info {
+                    .name {
+                        font-weight: 500;
+                        font-size: 14px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 250px;
+                        white-space: nowrap;
+                    }
+
+                    .address {
+                        color: #8A8A8A;
+                        font-size: 12px;
+                        margin: -4px 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 250px;
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            .details {
+                background: #FAFAFA;
+                padding: 10px 60px;
+                margin: 20px -20px;
+                font-size: 12px;
+
+                .row {
+                    display: flex;
+                    margin: 10px 0;
+
+                    span {
+                        flex: 1;
+
+                        &.name {
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            .delete-button {
+                margin-top: 24px;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.inbox-guest-reservation-details {
+    margin: -20px;
+
+    .section {
+        border-bottom: 1px solid #e5e5e5;
+        padding: 15px;
+    }
+
+    .basic-info {
+        .prop-info {
+            display: flex;
+            align-items: center;
+            margin: 6px 0;
+
+            .image {
+                margin-right: 10px;
+                width: 65px;
+                height: 40px;
+            }
+
+            .prop-name {
+                font-weight: 500;
+                font-size: 15px;
+                color: #212526;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: 260px;
+                overflow: hidden;
+            }
+
+            .prop-address {
+                font-size: 13px;
+                color: #5D5D5D;
+            }
+        }
+    }
+
+    .detailed-info {
+        .dates {
+            display: flex;
+            justify-content: space-between;
+
+            .date-block {
+                padding: 10px;
+
+                &.nights {
+                    text-align: center;
+                }
+
+                .title {
+                    font-size: 10px;
+                    font-weight: 500;
+                    color: #b6b6b6;
+                    text-transform: uppercase;
+                }
+
+                .value {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #696969;
+                }
+
+                .sub-value {
+                    font-size: 12px;
+                    color: #7d7d7d;
+                }
+            }
+        }
+
+        .res-info {
+            padding: 15px;
+
+            .info-block {
+                display: flex;
+                align-items: center;
+
+                .name {
+                    width: 100px;
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    font-weight: 500;
+                    color: #b6b6b6;
+                    margin: 4px 0;
+
+                    .block-icon {
+                        margin-right: 5px;
+                        position: relative;
+                        top: -2px;
+                    }
+                }
+
+                .value {
+                    font-size: 14px;
+                    color: #212121;
+
+                    .reserved {
+                        color: #3F9087;
+                    }
+
+                    .paid {
+                        color: #3F9087;
+                    }
+
+                    .unpaid {
+                        color: #FD7023;
+                    }
+                }
+            }
+        }
+    }
+
+    .calendar {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .spinner-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+}

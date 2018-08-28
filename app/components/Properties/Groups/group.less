@@ -1,0 +1,120 @@
+.properties-groups-wrapper {
+    width: 100%;
+    height: 100%;
+
+    .spinner-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    .properties-groups {
+        background: #fff;
+        margin: 10px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+        width: 930px;
+        min-height: 890px;
+
+        .search-bar {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #FAFAFA;
+            padding: 0 30px;
+        }
+
+        td {
+            .name {
+                font-size: 15px;
+                font-weight: 500;
+                color: #4a4a4a;
+            }
+
+            .desc, .name {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: inline-block;
+                white-space: nowrap;
+                max-width: 280px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .properties-groups-wrapper {
+        .properties-groups {
+            margin: 5px;
+            width: calc(~"100% - 10px");
+
+            .search-bar {
+                height: 58px;
+                padding: 10px 20px;
+                position: relative;
+
+                .button-new {
+                    position: absolute;
+                    right: 10px;
+                    top: -47px;
+                }
+
+                .search-box {
+                    width: 100%;
+
+                    .search-box-inside {
+                        max-width: none;
+                    }
+                }
+            }
+
+            thead {
+                display: none;
+            }
+
+            tbody {
+                border-top: 1px solid #ddd;
+
+                tr {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    height: 105px;
+                    border-bottom: 1px solid #ddd;
+
+                    td {
+                        height: auto;
+                        border: none;
+                        color: #555;
+                        padding: 0 0 0 10px;
+
+                        &:first-child {
+                            padding-top: 15px;
+                            padding-left: 10px;
+                        }
+
+                        &:last-child {
+                            padding-right: 10px;
+                            position: absolute;
+                            right: 0;
+                            top: 36px;
+                        }
+
+                        .date-time {
+                            display: flex;
+                            color: #999;
+
+                            .time {
+                                margin-left: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

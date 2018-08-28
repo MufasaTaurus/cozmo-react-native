@@ -1,0 +1,46 @@
+.date-filter {
+    .form {
+        width: 300px;
+    }
+
+    .dates {
+        border: 1px solid #c4c4c4;
+        border-radius: 2px;
+        padding: 10px;
+        color: #696969;
+
+        .separator {
+            margin: 0 12px;
+        }
+
+        .date {
+            display: inline-block;
+            position: relative;
+
+            .border {
+                display: none;
+                position: absolute;
+                background: #42a5f5;
+                width: calc(~"100% + 20px");
+                height: 3px;
+                bottom: -10px;
+                left: -10px;
+            }
+
+            &.active {
+                background: #e3f2fd;
+
+                .border {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .date-range-wrapper {
+        border: 1px solid #c4c4c4;
+        border-radius: 2px;
+        padding: 10px 20px;
+        margin-top: 10px;
+    }
+}

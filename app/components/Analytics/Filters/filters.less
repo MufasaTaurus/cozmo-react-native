@@ -1,0 +1,58 @@
+.analytics-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    float: right;
+    top: -60px;
+    position: relative;
+    z-index: 1;
+
+    .property {
+        flex: 2;
+
+        .property-picker {
+            border-radius: 2px;
+
+            .property-picker-selected-property {
+                padding: 8px;
+                height: 34px;
+
+                .vj-property-name {
+                    .vj-property-image, .vj-property-info .vj-property-name {
+                        display: none;
+                    }
+
+                    .vj-property-address {
+                        color: #000;
+                    }
+                }
+
+                .arrow-down {
+                    margin-top: -25px;
+                }
+            }
+
+            .property-picker-dropdown .property-picker-properties {
+                height: 300px;
+            }
+        }
+    }
+
+    .date {
+        flex: 1;
+        max-width: 140px;
+        margin: 0 16px;
+    }
+
+    .search {
+        flex: 2;
+    }
+
+    .filter-label {
+        position: absolute;
+        margin-top: -18px;
+        color: #fff;
+        font-size: 12px;
+    }
+}

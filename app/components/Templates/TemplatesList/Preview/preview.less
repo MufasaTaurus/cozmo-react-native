@@ -1,0 +1,40 @@
+@import (reference) '~utils/variables';
+
+.templates-list-preview {
+
+    .templates-list-preview-modal {
+        .modal-wrapper();
+
+        .preview {
+            .modal();
+            width: 950px;
+
+            .modal-header {
+                .modal-header();
+                text-align: left;
+            }
+
+            .template-content-wrapper {
+                background: #eee;
+                padding: 20px 40px;
+                overflow: auto;
+                height: 500px;
+
+                .template-content {
+                    background: #fff;
+                }
+            }
+
+            .footer {
+                text-align: right;
+                border-top: 1px solid #e5e5e5;
+                padding: 15px 12px;
+            }
+
+            .submit {
+                margin: 20px 40px;
+                text-align: center;
+            }
+        }
+    }
+}

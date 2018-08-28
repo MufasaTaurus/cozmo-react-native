@@ -1,0 +1,48 @@
+export const FETCH_TICKETS = 'cozmo/Inbox/FETCH_TICKETS';
+export const FETCH_TICKETS_SUCCESS = 'cozmo/Inbox/FETCH_TICKETS_SUCCESS';
+export const FETCH_TICKETS_ERROR = 'cozmo/Inbox/FETCH_TICKETS_ERROR';
+
+export const FETCH_TICKET = 'cozmo/Inbox/FETCH_TICKET';
+export const FETCH_TICKET_SUCCESS = 'cozmo/Inbox/FETCH_TICKET_SUCCESS';
+export const FETCH_TICKET_ERROR = 'cozmo/Inbox/FETCH_TICKET_ERROR';
+
+export const SET_TICKETS_DISPLAY = 'cozmo/Inbox/SET_TICKETS_DISPLAY';
+export const SET_TICKETS_FILTERS = 'cozmo/Inbox/SET_TICKETS_FILTERS';
+export const SET_MODAL_VISIBLE = 'cozmo/Inbox/SET_MODAL_VISIBLE';
+export const ADD_RECENT_TICKET = 'cozmo/Inbox/ADD_RECENT_TICKET';
+
+export const CREATE_NEW_TICKET = 'cozmo/Inbox/CREATE_NEW_TICKET';
+export const CREATE_NEW_TICKET_SUCCESS = 'cozmo/Inbox/CREATE_NEW_TICKET_SUCCESS';
+export const CREATE_NEW_TICKET_ERROR = 'cozmo/Inbox/CREATE_NEW_TICKET_ERROR';
+
+export const EDIT_TICKETS = 'cozmo/Inbox/EDIT_TICKETS';
+export const EDIT_TICKETS_SUCCESS = 'cozmo/Inbox/EDIT_TICKETS_SUCCESS';
+export const EDIT_TICKETS_ERROR = 'cozmo/Inbox/EDIT_TICKETS_ERROR';
+
+export const ARCHIVE_TICKETS = 'cozmo/Inbox/ARCHIVE_TICKETS';
+export const ARCHIVE_TICKETS_SUCCESS = 'cozmo/Inbox/ARCHIVE_TICKETS_SUCCESS';
+export const ARCHIVE_TICKETS_ERROR = 'cozmo/Inbox/ARCHIVE_TICKETS_ERROR';
+
+export const SEARCH_TICKETS = 'cozmo/Inbox/SEARCH_TICKETS';
+export const SEARCH_TICKETS_SUCCESS = 'cozmo/Inbox/SEARCH_TICKETS_SUCCESS';
+export const SEARCH_TICKETS_ERROR = 'cozmo/Inbox/SEARCH_TICKETS_ERROR';
+
+export const MERGE_TICKETS = 'cozmo/Inbox/MERGE_TICKETS';
+export const MERGE_TICKETS_SUCCESS = 'cozmo/Inbox/MERGE_TICKETS_SUCCESS';
+export const MERGE_TICKETS_ERROR = 'cozmo/Inbox/MERGE_TICKETS_ERROR';
+
+export const FETCH_GUEST = 'cozmo/Inbox/FETCH_GUEST';
+export const FETCH_GUEST_SUCCESS = 'cozmo/Inbox/FETCH_GUEST_SUCCESS';
+export const FETCH_GUEST_ERROR = 'cozmo/Inbox/FETCH_GUEST_ERROR';
+
+export const UPDATE_GUEST = 'cozmo/Inbox/UPDATE_GUEST';
+export const UPDATE_GUEST_SUCCESS = 'cozmo/Inbox/UPDATE_GUEST_SUCCESS';
+export const UPDATE_GUEST_ERROR = 'cozmo/Inbox/UPDATE_GUEST_ERROR';
+
+export const FETCH_GUEST_TICKETS = 'cozmo/Inbox/FETCH_GUEST_TICKETS';
+export const FETCH_GUEST_TICKETS_SUCCESS = 'cozmo/Inbox/FETCH_GUEST_TICKETS_SUCCESS';
+export const FETCH_GUEST_TICKETS_ERROR = 'cozmo/Inbox/FETCH_GUEST_TICKETS_ERROR';
+
+export const FETCH_GUEST_RESERVATIONS= 'cozmo/Inbox/FETCH_GUEST_RESERVATIONS';
+export const FETCH_GUEST_RESERVATIONS_SUCCESS = 'cozmo/Inbox/FETCH_GUEST_RESERVATIONS_SUCCESS';
+export const FETCH_GUEST_RESERVATIONS_ERROR = 'cozmo/Inbox/FETCH_GUEST_RESERVATIONS_ERROR';

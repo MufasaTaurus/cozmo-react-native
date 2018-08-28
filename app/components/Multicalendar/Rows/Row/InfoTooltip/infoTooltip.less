@@ -1,0 +1,63 @@
+.reservations .details-tooltip {
+    width: 200px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    position: absolute;
+    margin-top: 36px;
+    margin-left: 10px;
+    font-size: 12px;
+
+    .tooltip-header {
+        text-transform: uppercase;
+        border-bottom: 1px solid #EBEBEB;
+        padding: 8px 4px;
+        font-weight: 500;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .tooltip-details {
+        padding: 8px 8px 8px 30px;
+
+        .tooltip-row {
+            margin: 4px 0;
+
+            .name {
+                font-weight: 500;
+                display: inline-block;
+                width: 30px;
+            }
+
+            &.property-details {
+                display: flex;
+                align-items: center;
+                margin: 0;
+
+                .image {
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+
+                .property-info {
+                    display: inline-block;
+                    max-width: 138px;
+
+                    .property {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-size: 10px;
+                        max-width: 130px;
+
+                        &.property-name {
+                            font-weight: 500;
+                            margin-bottom: -2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

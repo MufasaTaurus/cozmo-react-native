@@ -1,0 +1,161 @@
+@maxWidth: 65%;
+
+.reservation-details-history {
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+
+    .switcher {
+        height: 42px;
+        margin-bottom: 20px;
+        user-select: none;
+
+        .option {
+            text-transform: uppercase;
+            padding: 11px 20px;
+            box-sizing: border-box;
+            display: inline-block;
+            height: 42px;
+            cursor: pointer;
+            font-size: 12px;
+
+            &:hover {
+                color: #00b1d3;
+            }
+
+            &.active {
+                border-bottom: 4px solid #00b1d3;
+            }
+
+            .icon {
+                margin-right: 6px;
+            }
+        }
+    }
+
+    .reservation-details-history-conversation {
+        padding: 24px;
+
+        .message {
+            margin-bottom: 16px;
+
+            .message-content {
+                background: #fff;
+                border-radius: 2px;
+                box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+                display: inline-block;
+                margin: 10px 0;
+                padding: 4px 10px;
+                font-size: 14px;
+                max-width: @maxWidth;
+
+                p {
+                    margin: 2px 0;
+                }
+            }
+
+            .message-attachments {
+                margin-bottom: 10px;
+                max-width: @maxWidth;
+
+                .message-attachment {
+                    border-radius: 2px;
+                    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+                    display: inline-block;
+                    max-width: @maxWidth;
+                    max-height: 100px;
+                    overflow: hidden;
+                    margin-right: 10px;
+
+                    .file-thumb {
+                        padding: 8px;
+                        text-align: center;
+                        color: #4b4b4b;
+                        width: 120px;
+                        height: 100px;
+
+                        .file-name {
+                            margin-top: 14px;
+                            font-size: 10px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+
+            .date {
+                font-size: 10px;
+                color: #7d7d7d;
+            }
+
+            &.user {
+                text-align: right;
+            }
+        }
+    }
+
+    .reservation-details-history-events {
+        padding: 24px 0;
+
+        .event {
+            display: flex;
+            padding-bottom: 20px;
+
+            .date {
+                font-size: 10px;
+                color: #7d7d7d;
+                width: 80px;
+                text-align: right;
+            }
+
+            .icon {
+                background: #1DB1D1;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                color: #fff;
+                margin: 0 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1;
+            }
+
+            .event-content {
+                font-size: 14px;
+
+                .event-title {
+                    font-weight: 500;
+                    margin-top: 5px;
+                }
+
+                .event-message {
+                    margin-top: 12px;
+
+                    img {
+                        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+                        border-radius: 2px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .line {
+                position: relative;
+                height: inherit;
+                width: 3px;
+                background: #1DB1D1;
+                left: -30px;
+                top: 20px;
+            }
+
+            &:last-child {
+                .line {
+                    display: none;
+                }
+            }
+        }
+    }
+
+}

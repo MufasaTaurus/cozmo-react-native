@@ -1,0 +1,76 @@
+.inbox-create-ticket-modal {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .new-ticket-modal {
+        width: 780px;
+        background: #fff;
+
+        .modal-header {
+            border-bottom: 1px solid #e5e5e5;
+            font-size: 20px;
+            font-weight: 500;
+            color: #37474f;
+            padding: 15px 12px;
+
+            .header-icon {
+                position: relative;
+                top: -2px;
+            }
+
+            .close {
+                float: right;
+                cursor: pointer;
+
+                &:hover {
+                    color: #9E9E9E;
+                }
+            }
+        }
+
+        .modal-content {
+            .modal-section {
+                border-bottom: 1px solid #e5e5e5;
+                padding: 15px 40px 40px;
+
+                .section-title {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #505050;
+                    margin-bottom: 15px;
+                }
+
+                .section-content {
+                    .ticket-options {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .priority-select,
+                        .type-select {
+                            width: 20%;
+                        }
+                        .team-member-picker,
+                        .tag-text-field-group {
+                            width: 28%
+                        }
+                    }
+                }
+            }
+
+            .submit-section {
+                margin: 24px 0;
+                text-align: center;
+            }
+        }
+    }
+}

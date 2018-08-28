@@ -1,0 +1,44 @@
+.properties-empty-state {
+    text-align: center;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+    background: #fff;
+    padding: 80px 0;
+    margin: 10px;
+    width: 1201px;
+    height: 867px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 479px) {
+        width: calc(~"100vw - 10px");
+        height: 450px;
+        margin: 5px;
+        padding: 16px 5px;
+    }
+
+    .title {
+        margin-top: 35px;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #505050;
+        letter-spacing: 2.8px;
+    }
+    .subtitle {
+        font-size: 14px;
+        color: #a7a7a7;
+    }
+    .buttons {
+            margin-top: 50px;
+
+        button {
+            position: relative;
+            width: 260px;
+            height: 50px;
+            margin: 5px;
+        }
+    }
+
+}

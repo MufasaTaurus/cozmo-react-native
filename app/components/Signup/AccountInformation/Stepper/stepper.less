@@ -1,0 +1,74 @@
+@color-blue: #2196f3;
+@color-grey: #bdbdbd;
+
+.stepper {
+    width: 200px;
+    margin: -10px auto 50px auto;
+
+    .steps {
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
+        user-select: none;
+
+        .step {
+            text-align: center;
+
+            .label {
+                text-transform: uppercase;
+                color: @color-grey;
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            .dot-wrapper {
+                background: #fff;
+                padding: 0 14px;
+                z-index: 2;
+                position: relative;
+                display: inline-block;
+
+                .outer-dot {
+                    box-shadow: none;
+                    padding: 4px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    background: #fff;
+                }
+
+                .inner-dot {
+                    border-radius: 50%;
+                    background: @color-grey;
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+
+            &.active {
+                .label {
+                    color: @color-blue;
+                }
+
+                .dot-wrapper {
+                    .outer-dot {
+                        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+                    }
+
+                    .inner-dot {
+                        background: @color-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    .line {
+        height: 1px;
+        width: 90%;
+        margin: auto;
+        background: @color-grey;
+        position: relative;
+        top: -14px;
+        z-index: 1;
+    }
+}

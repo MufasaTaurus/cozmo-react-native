@@ -1,0 +1,37 @@
+.template-picker-wrapper {
+    position: relative;
+
+    .template-picker {
+        position: absolute;
+        font-size: 12px;
+        min-width: 180px;
+        min-height: 30px;
+        background: #fff;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+
+        .templates-list {
+            overflow: auto;
+            max-height: 200px;
+
+            .template {
+                padding: 6px 16px;
+                cursor: pointer;
+
+                &:hover {
+                    background: #EBEBEB;
+                }
+
+                .template-name {
+                    color: #000;
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .search-box-wrapper {
+            padding: 6px;
+            font-size: 12px;
+        }
+    }
+}

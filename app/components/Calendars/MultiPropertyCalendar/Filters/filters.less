@@ -1,0 +1,43 @@
+.calendar-filters {
+    background: #fafafa;
+    height: 42px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+
+    .refine {
+        font-size: 14px;
+        font-weight: 700;
+        color: #37474f;
+    }
+
+    .filters {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        height: 100%;
+
+        > div {
+            height: 100%;
+        }
+    }
+
+    .reset-filters-button {
+        color: #298BE2;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        cursor: pointer;
+        height: 24px;
+        background: #E3F2FC;
+        border-radius: 5px;
+
+        &:hover {
+            filter: brightness(102%);
+        }
+    }
+}

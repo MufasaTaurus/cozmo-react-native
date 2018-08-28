@@ -1,0 +1,37 @@
+.vj-breadcrumbs {
+    background: #fafafa;
+    height: 74px;
+    color: #505050;
+    padding: 0 24px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+    z-index: 1;
+
+    &-content {
+
+        &-section {
+            font-size: 14px;
+            font-weight: 600;
+
+            @media screen and (max-width: 768px) {
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+
+        &-subsection {
+            font-size: 12px;
+            font-weight: 500;
+
+            @media screen and (max-width: 768px) {
+                font-size: 13px;
+            }
+
+            .ticket-id {
+                font-weight: 600;
+            }
+        }
+    }
+}

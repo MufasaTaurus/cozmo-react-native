@@ -1,0 +1,115 @@
+.properties-groups-group-details-wrapper {
+    height: 100%;
+
+    .properties-groups-group-details {
+        padding: 10px;
+
+        .group-properties-section, .group-emails-section {
+            background: #fff;
+            width: 930px;
+            min-height: 540px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+
+            .search-bar {
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: #FAFAFA;
+                padding: 0 30px;
+
+                .checkbox-wrapper {
+                    display: none;
+                }
+            }
+
+            .empty-state {
+                text-align: center;
+                font-size: 16px;
+                font-style: italic;
+                font-weight: 500;
+                margin-top: 70px;
+                color: #c6c6c6;
+            }
+
+            .br-ba {
+                white-space: pre-wrap;
+            }
+        }
+
+        .group-emails-section {
+            margin-bottom: 10px;
+            min-height: 327px;
+        }
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .properties-groups-group-details-wrapper {
+        .properties-groups-group-details {
+            padding: 5px;
+
+            .group-properties-section, .group-emails-section {
+                width: 100%;
+
+                .search-bar {
+                    padding: 10px 20px;
+                    position: relative;
+
+                    .checkbox-wrapper {
+                        display: block;
+                        position: relative;
+                        left: -12px;
+                    }
+
+                    .search-box {
+                        width: 100%;
+
+                         .search-box-inside {
+                             max-width: none;
+                         }
+                    }
+
+                    .button-new {
+                        position: absolute;
+                        right: 10px;
+                        top: -46px;
+                    }
+                }
+
+                thead {
+                    display: none;
+                }
+
+                .property {
+                    height: 105px;
+
+                    td {
+
+                        .vj-property-new-image-wrapper {
+                            width: 80px;
+                            height: 66px;
+
+                            .vj-property-new-image {
+                                max-width: 80px;
+                                height: 66px;
+                            }
+                        }
+
+                        &:first-child {
+                            padding-left: 6px!important;
+                        }
+
+                        &:last-child {
+                            padding-right: 6px!important;
+                        }
+
+                        &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

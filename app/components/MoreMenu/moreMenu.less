@@ -1,0 +1,36 @@
+.more-menu {
+    float: right;
+    position: relative;
+
+    .icon {
+        cursor: pointer;
+        color: #505050;
+    }
+
+    .popup-menu {
+        display: inline-block;
+        width: 160px;
+        background-color: #fff;
+        padding: 10px 0;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        .popup-option {
+            display: block;
+            height: 30px;
+            width: 100%;
+            padding: 0 15px;
+            font-size: 15px;
+            line-height: 2;
+            transition: all 200ms;
+
+            &:hover {
+                background-color: #e3f2fd;
+                font-weight: 500;
+            }
+        }
+    }
+}

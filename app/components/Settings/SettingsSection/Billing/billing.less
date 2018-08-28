@@ -1,0 +1,80 @@
+.settings-billing {
+    &-content {
+        max-width: 1000px;
+
+        &-card {
+            background: #fff;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+            margin-bottom: 25px;
+            padding: 25px;
+
+            .header {
+                color: #505050;
+
+                .title {
+                    font-weight: 500;
+                    font-size: 18px;
+
+                    .plan {
+                        color: #16bacc;
+                    }
+                }
+
+                .subtitle {
+                    font-size: 12px;
+                }
+
+                .change-plan-button {
+                    float: right;
+                    display: inline-block;
+                }
+            }
+
+            .date, .inv-id, .amount {
+                width: 150px;
+            }
+
+            .download-wrapper {
+                text-align: right;
+
+                .download {
+                    min-width: 50px!important;
+                }
+            }
+
+            .billing-table {
+                tbody {
+
+                    tr {
+                        cursor: default;
+
+                        &:hover {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+
+            .plan-item {
+                font-weight: 500;
+                color: #505050;
+                font-size: 14px;
+            }
+
+            .billing-total {
+                border-top: 1px solid #EBEBEB;
+
+                td {
+                    padding-top: 16px;
+                }
+            }
+
+            .total-payment {
+                font-weight: 500;
+                color: #505050;
+                font-size: 18px;
+            }
+        }
+
+    }
+}

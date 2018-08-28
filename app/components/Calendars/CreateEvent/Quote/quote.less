@@ -1,0 +1,72 @@
+.calendars-create-new-event-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .event-quote-content {
+        padding: 20px 40px;
+        flex: 1;
+        overflow: auto;
+
+        .error {
+            font-size: 16px;
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+
+    .payments {
+        margin-top: 20px;
+
+        .payments-header, .total {
+            background: #fafafa;
+            font-size: 14px;
+            font-weight: 500;
+            color: #232323;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            height: 58px;
+            padding: 0 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #5c5c5c;
+
+            .dates {
+                font-size: 14px;
+                color: #545454;
+            }
+
+            .fee {
+                width: 140px;
+
+                .text-field-group {
+                    margin: 0;
+                }
+            }
+        }
+
+        .total {
+            height: 73px;
+            font-size: 20px;
+            justify-content: flex-end;
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+}

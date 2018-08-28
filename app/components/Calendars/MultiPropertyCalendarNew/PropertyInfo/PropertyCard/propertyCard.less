@@ -1,0 +1,57 @@
+.calendar-property-card {
+    position: relative;
+    right: 0;
+
+    &-content {
+        width: 226px;
+        box-shadow: 0 15px 26px 0 rgba(0, 0, 0, 0.1), 0 0 11px 0 rgba(0, 0, 0, 0.06);
+        background: #fff;
+        z-index: 50;
+        position: absolute;
+
+        .image {
+            height: 102px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .info-section {
+            padding: 10px 15px 20px 15px;
+
+            .name {
+                font-size: 15px;
+                color: #232323;
+                margin-bottom: 6px;
+                font-weight: 500;
+            }
+
+            .detail {
+                font-size: 14px;
+                font-weight: 500;
+                color: #696969;
+            }
+        }
+
+        .actions {
+            display: flex;
+
+            .action {
+                width: 50%;
+                padding: 15px;
+                text-align: center;
+                color: #2196f3;
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                    color: #4a4a4a;
+                }
+
+                &:first-child {
+                    border-right: solid 1px #dddddd;
+                }
+            }
+        }
+    }
+}

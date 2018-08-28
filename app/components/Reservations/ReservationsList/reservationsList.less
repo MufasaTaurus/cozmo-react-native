@@ -1,0 +1,51 @@
+.reservations-list {
+
+    .reservations-list-content {
+        margin: 10px;
+        max-width: 1600px;
+        overflow: scroll;
+
+        .multicalendar-wrapper {
+            background: #fff;
+            height: calc(~"100vh - 154px");
+            width: 1532px;
+            overflow: hidden;
+        }
+
+        .add-button-wrapper {
+            float: right;
+            margin-top: 24px;
+            margin-right: 24px;
+        }
+
+        .toggle {
+            color: #00BBD3;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        table {
+            tbody {
+                td {
+                    .duration {
+                        color: #7d7d7d;
+                    }
+                }
+            }
+        }
+    }
+
+    .search-box-wrapper {
+        width: 300px;
+        margin-top: 10px;
+        margin-bottom: 26px;
+    }
+
+    .reservations-pagination {
+        text-align: right;
+        margin-top: 25px;
+    }
+}

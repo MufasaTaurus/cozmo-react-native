@@ -1,0 +1,30 @@
+.button {
+    background: #00b0ff;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 12px 0;
+    color: #fff;
+    padding: 12px;
+    min-width: 120px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    text-align: center;
+    user-select: none;
+    outline: none;
+
+    &:hover {
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 2px 2px 3px rgba(1,1,1,0.4);
+    }
+
+    &.disabled {
+        background: #cccccc;
+
+        &:hover {
+            box-shadow: none;
+            cursor: default;
+        }
+    }
+}

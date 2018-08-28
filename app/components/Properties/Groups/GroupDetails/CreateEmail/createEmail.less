@@ -1,0 +1,319 @@
+.create-email-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .spinner-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    .create-email {
+        padding: 10px;
+        flex: 1;
+        height: 100%;
+        overflow: auto;
+
+        .email-form {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+            width: 1207px;
+
+            .email-form-content {
+                display: flex;
+                background: #fff;
+
+                .email-info {
+                    min-width: 340px;
+                    max-width: 340px;
+                    position: relative;
+
+                    .vj-tabs-wrapper {
+                        border-top: none;
+                    }
+
+                    .basic-settings, .time-settings {
+                        padding: 40px;
+
+                        .select {
+                            margin-bottom: 10px;
+                        }
+
+                        .preview {
+                            color: #4a90e2;
+                            font-size: 14px;
+                            margin-top: 40px;
+
+                            &-title {
+                                font-weight: 500;
+                            }
+                        }
+
+                        .time-header {
+                            margin-top: 45px;
+                        }
+
+                        .before-check-in {
+                            margin-top: 18px;
+                        }
+
+                        .side-by-side {
+                            display: flex;
+                            margin-top: 18px;
+
+                            .left {
+                                margin-right: 5px;
+                                flex: 1;
+                            }
+
+                            .right {
+                                margin-left: 5px;
+                                flex: 1;
+                            }
+                        }
+                    }
+
+                    .group-email-info {
+                        height: 87px;
+                        width: 100%;
+                        background: #ffecb3;
+                        bottom: 0;
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        padding: 2px 20px;
+                        color: #ff8f00;
+
+                        .icon {
+                            margin-right: 20px;
+                        }
+
+                        .title {
+                            font-size: 14px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                        }
+
+                        .text {
+                            font-size: 13px;
+                            font-weight: 500;
+                            line-height: 1.31;
+                            color: #5c5c5c;
+                        }
+                    }
+                }
+
+                .email-body {
+                    flex: 1;
+                    padding: 15px 40px;
+                    border-right: 1px solid #ddd;
+                    border-left: 1px solid #ddd;
+
+                    .editor-wrapper {
+                        border: 1px solid #c4c4c4;
+
+                        .public-DraftEditorPlaceholder-root {
+                            padding: 11px;
+                            color: #B7B7B7;
+                            font-size: 14px;
+                        }
+
+                        .public-DraftEditor-content {
+                            padding: 11px;
+                            font-size: 14px;
+                            color: #696969;
+                            font-weight: 500;
+                            height: 500px;
+                        }
+
+                        .text-editor-controls {
+                            border-top: 1px solid #c4c4c4;
+                            box-shadow: none;
+                            background: #fafafa;
+                            z-index: 0;
+                        }
+                    }
+
+                    .preview {
+                        margin-top: 12px;
+                    }
+                }
+
+                .smart-label-section {
+                    min-width: 236px;
+
+                    .smart-label {
+                        box-shadow: none;
+
+                        .label-box {
+                            padding-left: 30px;
+                            font-size: 18px;
+                            border-bottom: none;
+
+                            .icon {
+                                display: none;
+                            }
+                        }
+
+                        .search-box-wrapper {
+                            padding-top: 0;
+
+                            .search-box {
+                                width: 170px;
+
+                                &-inside {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .create-email-wrapper {
+
+        .title-header {
+            display: none;
+        }
+
+        .create-email {
+            padding: 5px;
+
+            .email-form {
+                width: 100%;
+                box-shadow: none;
+
+                .email-form-content {
+                    flex-direction: column;
+                    background: transparent;
+
+                    .email-info {
+                        min-width: 100%;
+                        max-width: 100%;
+                        background: #fff;
+
+                        .basic-settings, .time-settings {
+                            padding: 20px;
+
+                            .select {
+                                margin-bottom: 10px;
+                            }
+
+                            .preview {
+                                color: #4a90e2;
+                                font-size: 14px;
+                                margin-top: 40px;
+                            }
+
+                            .time-header {
+                                margin-top: 45px;
+                            }
+
+                            .before-check-in {
+                                margin-top: 18px;
+                            }
+
+                            .side-by-side {
+                                display: flex;
+                                margin-top: 18px;
+
+                                .left {
+                                    margin-right: 5px;
+                                    flex: 1;
+                                }
+
+                                .right {
+                                    margin-left: 5px;
+                                    flex: 1;
+                                }
+                            }
+                        }
+
+                        .group-email-info {
+                            position: relative;
+
+                            .icon {
+                                margin-right: 20px;
+                            }
+
+                            .title {
+                                font-size: 14px;
+                                font-weight: 600;
+                                text-transform: uppercase;
+                            }
+
+                            .text {
+                                font-size: 13px;
+                                font-weight: 500;
+                                line-height: 1.31;
+                                color: #5c5c5c;
+                            }
+                        }
+                    }
+
+                    .email-body {
+                        margin-top: 5px;
+                        background: #fff;
+                        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+                        padding: 25px 20px;
+
+                        .preview {
+                            margin-top: 12px;
+                        }
+                    }
+
+                    .smart-label-section {
+                        min-width: unset;
+                        width: 100%;
+                        margin-top: 5px;
+                        background: #fff;
+                        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+
+                        .smart-label {
+                            width: 100%;
+
+                            .search-box-wrapper {
+                                padding-top: 0;
+
+                                .search-box {
+                                    width: 100%;
+                                    padding: 0 20px;
+
+                                    &-inside {
+                                        max-width: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .page-footer {
+            &-left-side {
+                display: none;
+            }
+
+            &-right-side {
+                display: flex;
+                .ghost {
+                    width: 108px;
+                    min-width: unset;
+                }
+
+                .big {
+                    width: 200px;
+                    min-width: unset;
+                }
+            }
+        }
+    }
+}

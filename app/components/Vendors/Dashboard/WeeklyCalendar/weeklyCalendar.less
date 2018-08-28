@@ -1,0 +1,180 @@
+.vendors-weekly-calendar {
+    width: 1126px;
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+
+    .calendar-header {
+        padding: 2px 16px;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .today {
+            flex: 1;
+        }
+
+        .dates {
+            font-size: 17px;
+            font-weight: 500;
+            color: #37474f;
+            user-select: none;
+            flex: 1;
+            text-align: center;
+
+            .period {
+                width: 200px;
+                display: inline-block;
+                text-align: center;
+            }
+
+            .arrow {
+                display: inline-block;
+                margin: 0 20px;
+                position: relative;
+                top: -2px;
+                cursor: pointer;
+                width: 20px;
+
+                &.prev {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                &:hover {
+                    color: #546e7a;
+                }
+            }
+        }
+
+        .switcher {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            user-select: none;
+
+            .option {
+                padding: 5px 14px;
+                font-size: 14px;
+                font-weight: 500;
+                color: #90a4ae;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #4a4a4a;
+                }
+
+                &.active {
+                    background: #e3f2fd;
+                    color: #64b5f6;
+                }
+            }
+        }
+    }
+
+    .calendar {
+        .header {
+            border-top: solid 1px #ddd;
+            border-bottom: solid 1px #ddd;
+            display: flex;
+            height: 48px;
+
+            .search {
+                width: 230px;
+                border-right: solid 1px #ddd;
+                padding: 0 15px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            .day-header {
+                width: 128px;
+                border-right: solid 1px #ddd;
+                font-size: 14px;
+                font-weight: 500;
+                color: #696969;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &.today {
+                    background: #e3f2fd;
+                }
+
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+
+        .rows {
+            overflow: hidden;
+
+            .rows-disabler {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 600px;
+            }
+
+            .row {
+                height: 110px;
+                display: flex;
+                border-bottom: solid 1px #ddd;
+
+                .row-property {
+                    width: 230px;
+                    border-right: solid 1px #ddd;
+                    padding: 12px 15px;
+
+                    .property-name {
+                        font-size: 13px;
+                        font-weight: 500;
+                        color: #37474f;
+                    }
+
+                    .property-address {
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: #7f8c8d;
+                    }
+                }
+
+                .day {
+                    width: 128px;
+                    border-right: solid 1px #ddd;
+                    background: #fafafa;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #EEEEEE;
+                    }
+
+                    &.today {
+                        background: #e3f2fd;
+
+                        &:hover {
+                            background: #bbdefb;
+                        }
+                    }
+
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

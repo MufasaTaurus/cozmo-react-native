@@ -1,0 +1,144 @@
+.properties-in-properties-list {
+    padding: 10px 20px 10px 10px;
+}
+
+.properties-list {
+    text-align: left;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+    background: #fff;
+    min-height: 880px;
+    min-width: 855px;
+    max-width: 1525px;
+    width: 100%;
+
+    .search-bar {
+        height: 60px;
+        background: #fafafa;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 26px;
+        margin-top: 20px;
+        border-top: 1px solid #e8e8e8;
+
+        .checkbox-all {
+            display: none;
+        }
+
+        .search-box-wrapper {
+            width: 300px;
+        }
+    }
+
+    .add-button {
+        float: right;
+        margin-right: 24px;
+    }
+
+    .vj-list-table {
+
+        tr td:first-child {
+            padding-left: 20px;
+        }
+
+        .label {
+            width: 10px;
+        }
+    }
+
+    .property {
+        cursor: pointer;
+
+        &:hover {
+            background: #EBEBEB;
+        }
+
+        td {
+
+            &:first-child {
+                padding-left: 20px!important;
+            }
+
+            .br-ba {
+                white-space: pre-wrap;
+            }
+        }
+    }
+
+    .api-label {
+        color: #fff;
+        font-weight: 500;
+        font-size: 10px;
+        background: #000;
+        border-radius: 2px;
+        padding: 4px 6px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .properties-list {
+        width: calc(~"100% - 10px");
+        min-width: inherit;
+        max-width: inherit;
+        margin: 5px;
+        overflow: hidden;
+
+        .search-bar {
+            height: 58px;
+            padding: 0 35px;
+            margin-top: 5px;
+
+            .search-box-wrapper {
+                width: 100%;
+                position: relative;
+
+                .checkbox-all {
+                    display: block;
+                    position: absolute;
+                    left: -30px;
+                    top: 6px;
+                }
+            }
+        }
+
+        .button-new {
+            display: none;
+        }
+
+        .vj-list-table {
+
+            thead {
+                display: none;
+            }
+
+            tr td:first-child {
+                padding-left: 6px;
+            }
+        }
+
+        .property {
+            height: 105px;
+
+            td {
+
+                .vj-property-new-image-wrapper {
+                    width: 80px;
+                    height: 66px;
+
+                    .vj-property-new-image {
+                        max-width: 80px;
+                        height: 66px;
+                    }
+                }
+
+                &:first-child {
+                    padding-left: 6px!important;
+                }
+
+                &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

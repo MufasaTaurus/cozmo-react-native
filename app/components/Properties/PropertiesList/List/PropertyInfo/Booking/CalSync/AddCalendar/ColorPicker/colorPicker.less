@@ -1,0 +1,39 @@
+.availability-calendars-add-calendar-color-picker {
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: -20px;
+    margin-top: 20px;
+
+    .choose {
+        position: absolute;
+        font-size: 14px;
+        font-weight: 500;
+        color: #505050;
+        margin-left: 40px;
+        line-height: 25px;
+    }
+
+    .colors {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .color {
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            margin: 0 6px;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.05, 1.05);
+                z-index: 2;
+            }
+
+            .color-check {
+                color: #fff;
+            }
+        }
+    }
+}
